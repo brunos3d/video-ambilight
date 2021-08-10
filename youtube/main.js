@@ -1,6 +1,6 @@
 var video;
 var ambilight;
-var videoId = '_OmLYckdMvI';
+var videoId = 'ASzOzrB-a9E';
 function onYouTubeIframeAPIReady() {
     video = new YT.Player('video', {
         videoId,
@@ -58,3 +58,10 @@ function ambilightStateChange(event) {
             break;
     }
 }
+
+function step() {
+    ambilight.seekTo(video.getCurrentTime());
+    window.requestAnimationFrame(step);
+}
+
+window.requestAnimationFrame(step);
