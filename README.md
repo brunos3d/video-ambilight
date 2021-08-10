@@ -20,6 +20,10 @@ This is a project that came about as an inspiration after the release of Next.js
 
 ## 🚀 [Preview](https://brunos3d.github.io/video-ambilight/)
 
+[Video + Canvas](https://brunos3d.github.io/video-ambilight/canvas/index.html)
+
+[YouTube iframe](https://brunos3d.github.io/video-ambilight/youtube/index.html)
+
 ## 🖋 CodePen
 
 [Video + Canvas](https://codepen.io/brunos3d/pen/ExWMaYx)
