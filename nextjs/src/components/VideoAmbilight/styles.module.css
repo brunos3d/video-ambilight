@@ -21,7 +21,7 @@
 }
 
 .ambilight {
-  /* filter: blur(80px) opacity(0.5) saturate(300%); */
+  filter: blur(80px) opacity(0.5) saturate(300%);
   left: 0;
   pointer-events: none;
   position: absolute;
