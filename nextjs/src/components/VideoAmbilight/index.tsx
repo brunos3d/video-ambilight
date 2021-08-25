@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import YTPlayer from 'youtube-player';
 
-import { YouTubePlayer, CustomEvent, PlayerStates } from './types';
+import { YouTubePlayer, CustomEvent, PlayerStates } from '../../types';
 
 import styles from './styles.module.css';
 
