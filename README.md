@@ -1,7 +1,7 @@
 # React Ambilight Project 🌈✨
 
 <p align="center">
-  <a href="https://brunos3d.github.io/react-ambilight/">
+  <a href="https://brunos3d.github.io/video-ambilight/">
     <img alt="React Ambilight Preview" src="./docs/images/youtube.png" />
   </a>
 </p>

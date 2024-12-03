@@ -86,7 +86,7 @@ The `classNames` object can have the following properties:
 
 ## 🚀 Demo
 
-Check out a live demo of the Ambilight effect: [Live Demo](https://brunos3d.github.io/react-ambilight/)
+Check out a live demo of the Ambilight effect: [Live Demo](https://brunos3d.github.io/video-ambilight/)
 
 ## 🛠 How It Works
 

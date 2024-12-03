@@ -1,7 +1,7 @@
 # Video Ambilight 🌈💻✨
 
 <p align="center">
-  <a href="https://brunos3d.github.io/react-ambilight/">
+  <a href="https://brunos3d.github.io/video-ambilight/">
     <img alt="Video Ambilight Preview" src="./images/youtube.png" />
   </a>
 </p>
@@ -14,11 +14,11 @@
 
 Check out the demos directly through the links below:
 
-- **[YouTube iframe](https://brunos3d.github.io/react-ambilight/youtube/index.html)**: Integration with YouTube's API using HTML and CSS.
-- **[Video + Canvas](https://brunos3d.github.io/react-ambilight/canvas/index.html)**: Implementation using `video` and `canvas`.
-- **[React/Next.js](https://brunos3d.github.io/react-ambilight/nextjs/)**: Implementation with React and Next.js.
+- **[YouTube iframe](https://brunos3d.github.io/video-ambilight/youtube/index.html)**: Integration with YouTube's API using HTML and CSS.
+- **[Video + Canvas](https://brunos3d.github.io/video-ambilight/canvas/index.html)**: Implementation using `video` and `canvas`.
+- **[React/Next.js](https://brunos3d.github.io/video-ambilight/nextjs/)**: Implementation with React and Next.js.
 
-👉 **[Full Preview](https://brunos3d.github.io/react-ambilight/)**
+👉 **[Full Preview](https://brunos3d.github.io/video-ambilight/)**
 
 ---
 
