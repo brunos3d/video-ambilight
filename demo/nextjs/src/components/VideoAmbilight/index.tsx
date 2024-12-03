@@ -1,3 +1,9 @@
+/*
+This is the legacy component, you can use the one available on npm instead.
+See the documentation at https://www.npmjs.com/package/react-ambilight for more information.
+*/
+
+// TODO: Remove this one after switching from local to the one available on npm
 import { useCallback, useEffect, useRef, useState } from 'react';
 import YTPlayer from 'youtube-player';
 
