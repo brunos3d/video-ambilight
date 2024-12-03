@@ -13,6 +13,6 @@
   ],
   "workspaces": [
     "packages/*",
-    "demo/*"
+    "docs/*"
   ]
 }

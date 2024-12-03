@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://brunos3d.github.io/video-ambilight/">
-    <img alt="React Ambilight Preview" src="./demo/images/youtube.png" />
+    <img alt="React Ambilight Preview" src="./docs/images/youtube.png" />
   </a>
 </p>
 
@@ -14,7 +14,7 @@ This project provides a **React component for creating Ambilight effects** with 
 
 The project is organized into the following directories:
 
-- **`demo/`**: Contains demo projects showcasing the use of the Ambilight component in different environments.
+- **`docs/`**: Contains demo projects showcasing the use of the Ambilight component in different environments.
   - **`canvas/`**: A demo using a simple HTML5 `<canvas>` element.
   - **`images/`**: Contains images used in the demos.
   - **`nextjs/`**: A demo for integrating the component in a Next.js project.
