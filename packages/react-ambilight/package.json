@@ -1,5 +1,5 @@
 {
-  "name": "video-ambilight",
+  "name": "react-ambilight",
   "author": "Bruno Silva <opensource@brunosilva.io>",
   "description": "🌈 A lightweight React component for creating an Ambilight effect with YouTube videos.",
   "license": "MIT",
@@ -17,7 +17,7 @@
     "neon",
     "immersive"
   ],
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",

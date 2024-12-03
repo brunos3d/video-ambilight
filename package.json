@@ -1,5 +1,5 @@
 {
-  "name": "video-ambilight-project",
+  "name": "react-ambilight",
   "author": "Bruno Silva <opensource@brunosilva.io>",
   "description": "🌈 project demonstrating an Ambilight effect with examples in HTML/CSS/Canvas, and React/Next.js.",
   "license": "MIT",

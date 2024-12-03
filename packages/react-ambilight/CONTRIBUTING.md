@@ -41,7 +41,7 @@ This project was bootstraped using [react-vite-component-template](https://githu
 1. Clone the repository:
 
 ```bash
-git clone git@github.com:brunos3d/video-ambilight.git
+git clone git@github.com:brunos3d/react-ambilight.git
 ```
 
 2. Open the project directory:

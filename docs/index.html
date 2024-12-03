@@ -1,138 +1,159 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: Helvetica, sans-serif;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Helvetica, sans-serif;
+      }
 
-        header {
-            width: 100%;
-            height: 64px;
-        }
+      header {
+        width: 100%;
+        height: 64px;
+      }
 
-        .buttons {
-            max-width: 1200px;
-            margin: 0 auto;
-            height: 100%;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-        }
+      .buttons {
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
 
-        .center {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-        }
+      .center {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
 
-        .button {
-            margin: 0 2px;
-        }
+      .button {
+        margin: 0 2px;
+      }
 
-        h4 {
-            margin: 20px 0;
-        }
+      h4 {
+        margin: 20px 0;
+      }
 
-        .row {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-        }
+      .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
 
-        .column {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+      .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
     </style>
     <title>🌈 Ambilight Effect</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="buttons">
-            <div class="button">
-                <a class="github-button" href="https://github.com/BrunoS3D" data-size="large"
-                    aria-label="Follow @BrunoS3D on GitHub">Follow @BrunoS3D</a>
-            </div>
-            <div class="center">
-                <div class="button">
-                    <a class="github-button" href="https://github.com/BrunoS3D/video-ambilight/subscription"
-                        data-icon="octicon-eye" data-size="large"
-                        aria-label="Watch BrunoS3D/video-ambilight on GitHub">Watch</a>
-                </div>
-                <div class="button">
-                    <a class="github-button" href="https://github.com/BrunoS3D/video-ambilight" data-icon="octicon-star"
-                        data-size="large" aria-label="Star BrunoS3D/video-ambilight on GitHub">Star</a>
-                </div>
-                <div class="button">
-                    <a class="github-button" href="https://github.com/BrunoS3D/video-ambilight/fork"
-                        data-icon="octicon-repo-forked" data-size="large"
-                        aria-label="Fork BrunoS3D/video-ambilight on GitHub">Fork</a>
-                </div>
-            </div>
-            <div class="button">
-                <a class="github-button" href="https://github.com/BrunoS3D/video-ambilight/archive/master.zip"
-                    data-icon="octicon-cloud-download" data-size="large"
-                    aria-label="Download BrunoS3D/video-ambilight on GitHub">Download</a>
-            </div>
+      <div class="buttons">
+        <div class="button">
+          <a class="github-button" href="https://github.com/BrunoS3D" data-size="large" aria-label="Follow @BrunoS3D on GitHub">Follow @BrunoS3D</a>
         </div>
+        <div class="center">
+          <div class="button">
+            <a
+              class="github-button"
+              href="https://github.com/BrunoS3D/react-ambilight/subscription"
+              data-icon="octicon-eye"
+              data-size="large"
+              aria-label="Watch BrunoS3D/react-ambilight on GitHub"
+              >Watch</a
+            >
+          </div>
+          <div class="button">
+            <a
+              class="github-button"
+              href="https://github.com/BrunoS3D/react-ambilight"
+              data-icon="octicon-star"
+              data-size="large"
+              aria-label="Star BrunoS3D/react-ambilight on GitHub"
+              >Star</a
+            >
+          </div>
+          <div class="button">
+            <a
+              class="github-button"
+              href="https://github.com/BrunoS3D/react-ambilight/fork"
+              data-icon="octicon-repo-forked"
+              data-size="large"
+              aria-label="Fork BrunoS3D/react-ambilight on GitHub"
+              >Fork</a
+            >
+          </div>
+        </div>
+        <div class="button">
+          <a
+            class="github-button"
+            href="https://github.com/BrunoS3D/react-ambilight/archive/master.zip"
+            data-icon="octicon-cloud-download"
+            data-size="large"
+            aria-label="Download BrunoS3D/react-ambilight on GitHub"
+            >Download</a
+          >
+        </div>
+      </div>
     </header>
 
     <div class="container my-5">
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col">
-                <div class="card">
-                    <img src="./images/video-canvas.png" class="card-img-top"
-                        alt="Ambilight effect using HTML5 video and canvas">
-                    <div class="card-body">
-                        <h5 class="card-title">Video + Canvas</h5>
-                        <p class="card-text">Ambilight effect using HTML5 video and canvas</p>
-                        <a href="./canvas/index.html" class="btn btn-primary">See demo</a>
-                    </div>
-                </div>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="./images/video-canvas.png" class="card-img-top" alt="Ambilight effect using HTML5 video and canvas" />
+            <div class="card-body">
+              <h5 class="card-title">Video + Canvas</h5>
+              <p class="card-text">Ambilight effect using HTML5 video and canvas</p>
+              <a href="./canvas/index.html" class="btn btn-primary">See demo</a>
             </div>
-            <div class="col">
-                <div class="card">
-                    <img src="./images/youtube.png" class="card-img-top"
-                        alt="Ambilight effect using YouTube iframe Player API">
-                    <div class="card-body">
-                        <h5 class="card-title">YouTube Player API</h5>
-                        <p class="card-text">Ambilight effect using YouTube iframe Player API</p>
-                        <a href="./youtube/index.html" class="btn btn-primary">See demo</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="./images/youtube.png" class="card-img-top"
-                        alt="Ambilight effect using YouTube iframe Player API">
-                    <div class="card-body">
-                        <h5 class="card-title">YouTube Player API + Next.js (React)</h5>
-                        <p class="card-text">Ambilight effect using YouTube iframe Player API with Next.js</p>
-                        <a href="https://video-ambilight.vercel.app/" class="btn btn-primary">See demo</a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="col">
+          <div class="card">
+            <img src="./images/youtube.png" class="card-img-top" alt="Ambilight effect using YouTube iframe Player API" />
+            <div class="card-body">
+              <h5 class="card-title">YouTube Player API</h5>
+              <p class="card-text">Ambilight effect using YouTube iframe Player API</p>
+              <a href="./youtube/index.html" class="btn btn-primary">See demo</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="./images/youtube.png" class="card-img-top" alt="Ambilight effect using YouTube iframe Player API" />
+            <div class="card-body">
+              <h5 class="card-title">YouTube Player API + Next.js (React)</h5>
+              <p class="card-text">Ambilight effect using YouTube iframe Player API with Next.js</p>
+              <a href="https://react-ambilight.vercel.app/" class="btn btn-primary">See demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-        crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

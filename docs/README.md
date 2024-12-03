@@ -1,8 +1,7 @@
-
 # Video Ambilight 🌈💻✨
 
 <p align="center">
-  <a href="https://brunos3d.github.io/video-ambilight/">
+  <a href="https://brunos3d.github.io/react-ambilight/">
     <img alt="Video Ambilight Preview" src="./images/youtube.png" />
   </a>
 </p>
@@ -15,26 +14,26 @@
 
 Check out the demos directly through the links below:
 
-- **[YouTube iframe](https://brunos3d.github.io/video-ambilight/youtube/index.html)**: Integration with YouTube's API using HTML and CSS.
-- **[Video + Canvas](https://brunos3d.github.io/video-ambilight/canvas/index.html)**: Implementation using `video` and `canvas`.
-- **[React/Next.js](https://brunos3d.github.io/video-ambilight/nextjs/)**: Implementation with React and Next.js.
+- **[YouTube iframe](https://brunos3d.github.io/react-ambilight/youtube/index.html)**: Integration with YouTube's API using HTML and CSS.
+- **[Video + Canvas](https://brunos3d.github.io/react-ambilight/canvas/index.html)**: Implementation using `video` and `canvas`.
+- **[React/Next.js](https://brunos3d.github.io/react-ambilight/nextjs/)**: Implementation with React and Next.js.
 
-👉 **[Full Preview](https://brunos3d.github.io/video-ambilight/)**
+👉 **[Full Preview](https://brunos3d.github.io/react-ambilight/)**
 
 ---
 
 ## ✨ Examples in the Project
 
 1. **YouTube iframe**  
-   Path: `video-ambilight/youtube/`  
+   Path: `react-ambilight/youtube/`  
    An example using pure HTML, CSS, and the YouTube API (`iframe_api`).
 
 2. **Video + Canvas**  
-   Path: `video-ambilight/canvas/`  
+   Path: `react-ambilight/canvas/`  
    Implementation using a `video` element and `canvas` manipulation.
 
 3. **Next.js/React**  
-   Path: `video-ambilight/nextjs/src/components/VideoAmbilight/index.tsx`  
+   Path: `react-ambilight/nextjs/src/components/VideoAmbilight/index.tsx`  
    A reusable ambilight component built with React and Next.js.
 
 ---
@@ -52,13 +51,15 @@ Check out the demos directly through the links below:
 
 ## 💡 How to Use
 
-1. Clone the repository:  
+1. Clone the repository:
+
    ```bash
-   git clone https://github.com/brunos3d/video-ambilight.git
-   cd video-ambilight
+   git clone https://github.com/brunos3d/react-ambilight.git
+   cd react-ambilight
    ```
 
-2. Access the desired example:  
+2. Access the desired example:
+
    - **HTML/CSS/YouTube**: Open the `index.html` file in your browser.
    - **Canvas/Video**: Navigate to `canvas/index.html`.
    - **React/Next.js**: Run the project:
@@ -112,8 +113,8 @@ export default function App() {
 
 ## 🖋 Examples on CodePen
 
-- **[YouTube iframe](https://codepen.io/brunos3d/pen/WNjLEGR)**  
-- **[Video + Canvas](https://codepen.io/brunos3d/pen/ExWMaYx)**  
+- **[YouTube iframe](https://codepen.io/brunos3d/pen/WNjLEGR)**
+- **[Video + Canvas](https://codepen.io/brunos3d/pen/ExWMaYx)**
 
 ---
 

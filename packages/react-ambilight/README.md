@@ -13,13 +13,13 @@ A lightweight React component to create a stunning **Ambilight effect** for YouT
 Install the package via npm:
 
 ```bash
-npm install video-ambilight
+npm install react-ambilight
 ```
 
 or using Yarn:
 
 ```bash
-yarn add video-ambilight
+yarn add react-ambilight
 ```
 
 ## 🔧 Usage
@@ -28,7 +28,7 @@ Here's a quick example of how to use the component:
 
 ```tsx
 import React from 'react'
-import { VideoAmbilight } from 'video-ambilight'
+import { VideoAmbilight } from 'react-ambilight'
 
 export default function App() {
   return (
@@ -44,7 +44,7 @@ Customize the component by passing a `className` or `classNames` object with cus
 ```tsx
 // tailwind example
 import React from 'react'
-import { VideoAmbilight } from 'video-ambilight'
+import { VideoAmbilight } from 'react-ambilight'
 
 export default function App() {
   return (
@@ -86,7 +86,7 @@ The `classNames` object can have the following properties:
 
 ## 🚀 Demo
 
-Check out a live demo of the Ambilight effect: [Live Demo](https://brunos3d.github.io/video-ambilight/)
+Check out a live demo of the Ambilight effect: [Live Demo](https://brunos3d.github.io/react-ambilight/)
 
 ## 🛠 How It Works
 
