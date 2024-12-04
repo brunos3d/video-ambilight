@@ -17,7 +17,7 @@
     "neon",
     "immersive"
   ],
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
@@ -38,8 +38,8 @@
   ],
   "types": "./dist/main.d.ts",
   "peerDependencies": {
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react": "^16.14.0 || ^17.0.2 || ^18.0.0",
+    "react-dom": "^16.14.0 || ^17.0.2 || ^18.0.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "1.3.2",
