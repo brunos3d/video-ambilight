@@ -1,9 +1,10 @@
 'use client'
 
-import { useCallback, useEffect, useRef, useState, useId } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import YTPlayer from 'youtube-player'
 import cn from 'clsx'
 
+import { useUniqueId } from '../../hooks/useUniqueId'
 import { YouTubePlayer, CustomEvent, PlayerStates } from '../../types/youtube-player'
 import styles from './styles.module.css'
 
@@ -44,8 +45,8 @@ export function VideoAmbilight({ videoId, className, classNames = {} }: VideoAmb
   const [videoPlayer, setVideoPlayer] = useState<YouTubePlayer>()
   const [ambilightPlayer, setAmbilightPlayer] = useState<YouTubePlayer>()
 
-  const ambilightId = useId()
-  const ambilightVideoId = useId()
+  const ambilightId = useUniqueId()
+  const ambilightVideoId = useUniqueId()
 
   const videoReady = useCallback((_event: CustomEvent) => {}, [])
 
