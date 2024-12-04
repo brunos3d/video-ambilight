@@ -1,4 +1,4 @@
-# React Ambilight Project 🌈✨
+# Video Ambilight 🌈✨
 
 <p align="center">
   <a href="https://brunos3d.github.io/video-ambilight/">
