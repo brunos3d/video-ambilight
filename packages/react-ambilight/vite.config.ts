@@ -6,7 +6,6 @@ import { globSync } from 'glob'
 import { defineConfig, Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import dts from 'vite-plugin-dts'
-import { libInjectCss } from 'vite-plugin-lib-inject-css'
 import preserveDirectives from 'rollup-preserve-directives'
 
 /**
@@ -53,8 +52,6 @@ function hoistUseClient(): Plugin {
 export default defineConfig({
   plugins: [
     react(),
-    // https://github.com/vitejs/vite/issues/1579#issuecomment-1483756199
-    libInjectCss(),
     dts({ exclude: ['**/*.stories.ts', 'src/test', '**/*.test.tsx'] }),
     hoistUseClient(), // hoist "use client" directives to the top of the file
   ],

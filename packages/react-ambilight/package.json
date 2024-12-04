@@ -17,7 +17,7 @@
     "neon",
     "immersive"
   ],
-  "version": "1.0.4",
+  "version": "1.0.5",
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
@@ -75,8 +75,7 @@
     "stylelint-config-standard": "36.0.0",
     "typescript": "5.4.5",
     "vite": "5.2.8",
-    "vite-plugin-dts": "3.8.2",
-    "vite-plugin-lib-inject-css": "2.0.1"
+    "vite-plugin-dts": "3.8.2"
   },
   "dependencies": {
     "youtube-player": "5.5.2"
