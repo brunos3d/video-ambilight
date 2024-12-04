@@ -29,7 +29,7 @@ Here's a quick example of how to use the component:
 ```tsx
 import React from 'react'
 import { VideoAmbilight } from 'react-ambilight'
-import 'react-ambilight/dist/index.css'
+import 'react-ambilight/dist/style.css'
 
 export default function App() {
   return (
@@ -46,7 +46,7 @@ Customize the component by passing a `className` or `classNames` object with cus
 // tailwind example
 import React from 'react'
 import { VideoAmbilight } from 'react-ambilight'
-import 'react-ambilight/dist/index.css'
+import 'react-ambilight/dist/style.css'
 
 export default function App() {
   return (

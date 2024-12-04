@@ -82,7 +82,7 @@ export default defineConfig({
       ),
       output: {
         entryFileNames: '[name].js',
-        assetFileNames: 'assets/[name][extname]',
+        assetFileNames: '[name][extname]',
         globals: {
           react: 'React',
           'react-dom': 'React-dom',
