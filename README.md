@@ -10,6 +10,14 @@
 
 This project provides a **React component for creating Ambilight effects** with YouTube videos or HTML video elements. It also includes different demos and an example of the component integration in various environments like plain HTML and Next.js.
 
+## 🚀 Getting Started
+
+To get started with the `react-ambilight` component, you can install it via npm using the following command:
+
+```bash
+npm install react-ambilight
+```
+
 ## 📂 Project Structure
 
 The project is organized into the following directories:
@@ -23,14 +31,6 @@ The project is organized into the following directories:
   - **`react-ambilight/`**: The React component package. This can be published to NPM and used in any React project.
   - It also includes configuration files for building and distributing the package.
 - **`LICENSE`**: The project's license file.
-
-## 🚀 Getting Started
-
-To get started with the `react-ambilight` component, you can install it via npm using the following command:
-
-```bash
-npm install react-ambilight
-```
 
 Please refer to the [package README](./packages/react-ambilight/README.md) for detailed installation and usage instructions.
 
