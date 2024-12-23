@@ -20,6 +20,8 @@ npm install react-ambilight
 
 Please refer to the [package README](./packages/react-ambilight/README.md) for detailed installation and usage instructions.
 
+https://www.npmjs.com/react-ambilight
+
 ## 📂 Project Structure
 
 The project is organized into the following directories:
