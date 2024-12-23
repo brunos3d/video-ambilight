@@ -18,6 +18,8 @@ To get started with the `react-ambilight` component, you can install it via npm 
 npm install react-ambilight
 ```
 
+Please refer to the [package README](./packages/react-ambilight/README.md) for detailed installation and usage instructions.
+
 ## 📂 Project Structure
 
 The project is organized into the following directories:
@@ -31,8 +33,6 @@ The project is organized into the following directories:
   - **`react-ambilight/`**: The React component package. This can be published to NPM and used in any React project.
   - It also includes configuration files for building and distributing the package.
 - **`LICENSE`**: The project's license file.
-
-Please refer to the [package README](./packages/react-ambilight/README.md) for detailed installation and usage instructions.
 
 ## 📄 License
 
