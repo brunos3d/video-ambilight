@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { ArrowRight, Blend, Gauge, Layers, ShieldCheck } from 'lucide-react'
-import { GitHubIcon, NpmIcon } from '@/components/brand-icons'
+import { GitHubIcon, NpmIcon, StorybookIcon } from '@/components/brand-icons'
 import { Brand } from '@/components/brand'
 import { InstallTabs } from '@/components/install-tabs'
 import { DEMO_GROUPS, SITE } from '@/lib/site'
@@ -50,6 +50,10 @@ export default function HomePage() {
             See it run
             <ArrowRight size={16} aria-hidden="true" />
           </Link>
+          <a className="button" href={SITE.storybook} target="_blank" rel="noreferrer">
+            <StorybookIcon size={15} />
+            Storybook
+          </a>
           <a className="button" href={SITE.repo} target="_blank" rel="noreferrer">
             <GitHubIcon size={15} />
             GitHub
