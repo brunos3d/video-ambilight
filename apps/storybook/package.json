@@ -1,0 +1,45 @@
+{
+  "name": "storybook",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Storybook host with behavior and configuration stories for every @videoglow integration.",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "typecheck": "tsc -p tsconfig.json",
+    "lint": "eslint -c ../../eslint.config.mjs ."
+  },
+  "dependencies": {
+    "@videoglow/canvas": "workspace:^",
+    "@videoglow/core": "workspace:^",
+    "@videoglow/react": "workspace:^",
+    "@videoglow/react-video": "workspace:^",
+    "@videoglow/react-youtube": "workspace:^",
+    "@videoglow/video": "workspace:^",
+    "@videoglow/youtube": "workspace:^",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-docs": "10.6.0",
+    "@storybook/react-vite": "10.6.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "6.1.1",
+    "storybook": "10.6.0",
+    "typescript": "5.9.3",
+    "vite": "8.3.1"
+  },
+  "nx": {
+    "tags": [
+      "layer:app"
+    ],
+    "targets": {
+      "storybook": {
+        "dependsOn": [
+          "^build"
+        ]
+      }
+    }
+  }
+}
