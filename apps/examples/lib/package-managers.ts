@@ -1,6 +1,6 @@
 export type PackageManager = 'pnpm' | 'npm' | 'yarn' | 'bun'
 
-export const PACKAGE_MANAGERS: readonly PackageManager[] = ['pnpm', 'npm', 'yarn', 'bun']
+export const PACKAGE_MANAGERS: readonly PackageManager[] = ['npm', 'pnpm', 'yarn', 'bun']
 
 const ADD: Record<PackageManager, string> = {
   pnpm: 'pnpm add',
@@ -35,13 +35,13 @@ export const packageManagerStore = {
   get(): PackageManager {
     try {
       const stored = window.localStorage.getItem(STORAGE_KEY)
-      return isPackageManager(stored) ? stored : 'pnpm'
+      return isPackageManager(stored) ? stored : 'npm'
     } catch {
-      return 'pnpm'
+      return 'npm'
     }
   },
   getServerSnapshot(): PackageManager {
-    return 'pnpm'
+    return 'npm'
   },
   set(next: PackageManager): void {
     try {

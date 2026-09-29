@@ -22,6 +22,17 @@ function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
           <span className="nav-dot" aria-hidden="true" />
           Overview
         </Link>
+        <a
+          className="nav-link"
+          href={SITE.storybook}
+          target="_blank"
+          rel="noreferrer"
+          onClick={onNavigate}
+        >
+          <StorybookIcon size={15} />
+          Storybook
+          <ExternalLink size={12} aria-hidden="true" className="ml-auto opacity-50" />
+        </a>
       </div>
       {DEMO_GROUPS.map((group) => (
         <div className="nav-group" key={group.label}>
@@ -47,41 +58,29 @@ function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
   )
 }
 
+function FooterLink({ href, icon, label }: { href: string; icon: ReactNode; label: string }) {
+  return (
+    <a className="footer-link" href={href} target="_blank" rel="noreferrer">
+      {icon}
+      <span>{label}</span>
+      <ExternalLink size={12} aria-hidden="true" className="ml-auto opacity-50" />
+    </a>
+  )
+}
+
 function ProjectLinks() {
   return (
     <div className="sidebar-footer">
       <p className="nav-label">Project</p>
-      <a className="footer-link" href={SITE.repo} target="_blank" rel="noreferrer">
-        <GitHubIcon size={15} />
-        <span>Source on GitHub</span>
-        <ExternalLink size={12} aria-hidden="true" className="ml-auto opacity-50" />
-      </a>
-      <a className="footer-link" href={SITE.npm} target="_blank" rel="noreferrer">
-        <NpmIcon size={15} />
-        <span>@videoglow on npm</span>
-        <ExternalLink size={12} aria-hidden="true" className="ml-auto opacity-50" />
-      </a>
-      <a
-        className="footer-link"
-        href={`${SITE.repo}/tree/main/apps/storybook`}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <StorybookIcon size={15} />
-        <span>Storybook stories</span>
-        <ExternalLink size={12} aria-hidden="true" className="ml-auto opacity-50" />
-      </a>
+      <FooterLink href={SITE.repo} icon={<GitHubIcon size={15} />} label="Source on GitHub" />
+      <FooterLink href={SITE.npm} icon={<NpmIcon size={15} />} label="@videoglow on npm" />
       <p className="nav-label nav-label-gap">Author</p>
-      <a className="footer-link" href={SITE.author.site} target="_blank" rel="noreferrer">
-        <Globe size={15} strokeWidth={2.25} aria-hidden="true" />
-        <span>{SITE.author.name}</span>
-        <ExternalLink size={12} aria-hidden="true" className="ml-auto opacity-50" />
-      </a>
-      <a className="footer-link" href={SITE.author.github} target="_blank" rel="noreferrer">
-        <GitHubIcon size={15} />
-        <span>@brunos3d</span>
-        <ExternalLink size={12} aria-hidden="true" className="ml-auto opacity-50" />
-      </a>
+      <FooterLink
+        href={SITE.author.site}
+        icon={<Globe size={15} strokeWidth={2.25} aria-hidden="true" />}
+        label={SITE.author.name}
+      />
+      <FooterLink href={SITE.author.github} icon={<GitHubIcon size={15} />} label="@brunos3d" />
     </div>
   )
 }
@@ -173,6 +172,9 @@ export function SiteShell({ children }: { children: ReactNode }) {
             </a>
             <a href={SITE.npm} target="_blank" rel="noreferrer">
               npm
+            </a>
+            <a href={SITE.storybook} target="_blank" rel="noreferrer">
+              Storybook
             </a>
             <a href={SITE.author.github} target="_blank" rel="noreferrer">
               @brunos3d
