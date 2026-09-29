@@ -5,4 +5,4 @@ export const MEDIA = {
 } as const
 
 /** The clip used by the original demos. */
-export const YOUTUBE_VIDEO_ID = 'ASzOzrB-a9E'
+export const YOUTUBE_VIDEO_ID = 'I5QDO6BsWnU'

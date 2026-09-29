@@ -15,7 +15,7 @@
 `react-ambilight@2` re-exports `VideoAmbilight` with the 1.x prop shape:
 
 ```tsx
-<VideoAmbilight videoId="ASzOzrB-a9E" className="..." classNames={{ ambilight: '...' }} />
+<VideoAmbilight videoId="I5QDO6BsWnU" className="..." classNames={{ ambilight: '...' }} />
 ```
 
 - `videoId`, `className` and every `classNames` key are honored.
@@ -42,11 +42,11 @@
 // before
 import { VideoAmbilight } from 'react-ambilight'
 import 'react-ambilight/dist/style.css'
-;<VideoAmbilight videoId="ASzOzrB-a9E" />
+;<VideoAmbilight videoId="I5QDO6BsWnU" />
 
 // after
 import { YouTubeAmbilight } from '@videoglow/react-youtube'
-;<YouTubeAmbilight videoId="ASzOzrB-a9E" glow={{ blur: 80, opacity: 0.5, saturation: 3 }} />
+;<YouTubeAmbilight videoId="I5QDO6BsWnU" glow={{ blur: 80, opacity: 0.5, saturation: 3 }} />
 ```
 
 For native video, which the old package did not support:

@@ -7,8 +7,12 @@ const config: StorybookConfig = {
     name: '@storybook/react-vite',
     options: {},
   },
-  // Media fixtures are shared with the examples app.
-  staticDirs: ['../../examples/public'],
+  // Media fixtures and the logo are shared with the examples app. Listed explicitly so the
+  // Storybook build never picks up its own copy under apps/examples/public/storybook.
+  staticDirs: [
+    { from: '../../examples/public/media', to: '/media' },
+    { from: '../../examples/public/videoglow-logo.svg', to: '/videoglow-logo.svg' },
+  ],
   core: {
     disableTelemetry: true,
   },

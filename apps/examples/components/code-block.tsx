@@ -7,7 +7,7 @@ export function CodeBlock({ code, title }: { code: string; title?: string }) {
     <div className="panel">
       {title ? (
         <h2>
-          <Terminal size={14} strokeWidth={1.75} aria-hidden="true" />
+          <Terminal size={14} strokeWidth={2.25} aria-hidden="true" />
           {title}
         </h2>
       ) : null}

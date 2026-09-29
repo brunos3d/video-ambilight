@@ -54,7 +54,7 @@
   --secondary: #17171f;
   --secondary-foreground: #ececf1;
   --muted: #15151d;
-  --muted-foreground: #8f8fa3;
+  --muted-foreground: #9c9cb0;
   --accent: #1b1b25;
   --accent-foreground: #ececf1;
   --destructive: #ff6b6b;
@@ -81,7 +81,7 @@
     @apply bg-background text-foreground;
     margin: 0;
     line-height: 1.55;
-    font-size: 15px;
+    font-size: 15.5px;
     overflow-x: hidden; /* glow layers spill on purpose */
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -190,7 +190,8 @@ body::after {
   margin: 0 0 0.35rem;
   padding: 0 0.6rem;
   font-family: var(--font-mono);
-  font-size: 0.66rem;
+  font-size: 0.68rem;
+  font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--muted-foreground);
@@ -201,15 +202,16 @@ body::after {
   gap: 0.6rem;
   padding: 0.45rem 0.6rem;
   border-radius: 0.55rem;
-  color: var(--muted-foreground);
-  font-size: 0.9rem;
+  color: #b4b4c4;
+  font-size: 0.92rem;
+  font-weight: 500;
   transition:
     background-color 150ms ease,
     color 150ms ease,
     transform 150ms ease;
 }
 .nav-link svg {
-  opacity: 0.7;
+  opacity: 0.85;
   transition: opacity 150ms ease;
 }
 .nav-link:hover {
@@ -263,8 +265,9 @@ body::after {
   gap: 0.6rem;
   padding: 0.4rem 0.6rem;
   border-radius: 0.55rem;
-  color: var(--muted-foreground);
-  font-size: 0.85rem;
+  color: #b4b4c4;
+  font-size: 0.87rem;
+  font-weight: 500;
   transition:
     background-color 150ms ease,
     color 150ms ease;
@@ -479,7 +482,8 @@ body::after {
   gap: 0.4rem;
   margin: 0 0 0.6rem;
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.72rem;
+  font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--glow-violet);
@@ -491,9 +495,9 @@ body::after {
 }
 .lede {
   margin: 0 0 1rem;
-  color: var(--muted-foreground);
+  color: #b0b0c0;
   max-width: 68ch;
-  font-size: 1.02rem;
+  font-size: 1.04rem;
 }
 .pill-row {
   display: flex;
@@ -604,8 +608,8 @@ a.pill:hover {
 }
 .principle p {
   margin: 0;
-  color: var(--muted-foreground);
-  font-size: 0.88rem;
+  color: #b0b0c0;
+  font-size: 0.9rem;
 }
 
 .section-title {
@@ -670,8 +674,8 @@ a.pill:hover {
 }
 .card p {
   margin: 0 0 0.6rem;
-  color: var(--muted-foreground);
-  font-size: 0.88rem;
+  color: #b0b0c0;
+  font-size: 0.9rem;
 }
 .card .pill {
   align-self: flex-start;
@@ -696,7 +700,7 @@ a.pill:hover {
 }
 .panel p {
   margin: 0;
-  color: var(--muted-foreground);
+  color: #b8b8c8;
 }
 .panel p code {
   color: var(--foreground);

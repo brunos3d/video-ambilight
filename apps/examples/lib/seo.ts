@@ -1,0 +1,31 @@
+/** Search-facing copy shared by the metadata, the OG image and the sitemap. */
+export const SEO = {
+  title: 'videoglow: Ambilight glow effect for HTML video, canvas and YouTube',
+  shortTitle: 'videoglow',
+  ogTitle: 'videoglow: Ambilight glow for video, canvas and YouTube',
+  description:
+    'Add a Philips Ambilight style glow behind any HTML5 video, canvas or YouTube player. Framework-agnostic core, React and Next.js components, GPU-friendly and tiny.',
+  tagline: 'Ambient light for the web’s moving pictures',
+  keywords: [
+    'ambilight',
+    'ambilight effect',
+    'ambient light video',
+    'video glow effect',
+    'react ambilight',
+    'react video glow',
+    'youtube ambilight',
+    'youtube ambient mode',
+    'html5 video effect',
+    'canvas glow',
+    'ambient backlight',
+    'bias lighting web',
+    'react video component',
+    'next.js video effect',
+    'requestVideoFrameCallback',
+    'css blur video background',
+    'video player glow',
+    'react-ambilight',
+    'videoglow',
+  ],
+  url: 'https://videoglow.brunosilva.io',
+} as const

@@ -7,7 +7,10 @@ const CODE = `
 import { createCanvasSource } from '@videoglow/canvas'
 import { Ambilight, useFrameSource } from '@videoglow/react'
 
-export const metadata = { title: 'Canvas source' }
+export const metadata = {
+  title: 'Canvas source',
+  alternates: { canonical: '/canvas' },
+}
 
 export function Visualizer() {
   const [source, ref] = useFrameSource((el: HTMLCanvasElement) => createCanvasSource(el, { mode: 'continuous' }))

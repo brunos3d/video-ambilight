@@ -1,4 +1,4 @@
-import type { LucideIcon } from 'lucide-react'
+import type { ComponentType } from 'react'
 import {
   Activity,
   BookOpen,
@@ -8,8 +8,15 @@ import {
   History,
   PaintBucket,
   SlidersHorizontal,
-  Waypoints,
 } from 'lucide-react'
+import { YouTubeIcon } from '@/components/brand-icons'
+
+/** Lucide icons and the Simple Icons brand marks share this surface. */
+export type IconComponent = ComponentType<{
+  size?: number
+  className?: string
+  strokeWidth?: number
+}>
 
 export const SITE = {
   name: 'videoglow',
@@ -19,6 +26,8 @@ export const SITE = {
   repo: 'https://github.com/brunos3d/video-ambilight',
   npm: 'https://www.npmjs.com/org/videoglow',
   npmCore: 'https://www.npmjs.com/package/@videoglow/core',
+  /** Static Storybook build, served by this site. */
+  storybook: '/storybook',
   author: {
     name: 'Bruno Silva',
     site: 'https://brunosilva.io',
@@ -42,7 +51,7 @@ export interface DemoRoute {
   readonly title: string
   readonly summary: string
   readonly packages: readonly string[]
-  readonly icon: LucideIcon
+  readonly icon: IconComponent
 }
 
 export interface DemoGroup {
@@ -73,7 +82,7 @@ export const DEMO_GROUPS: readonly DemoGroup[] = [
         title: 'YouTube',
         summary: 'Two synchronized IFrame players with an observable drift policy.',
         packages: ['@videoglow/react-youtube', '@videoglow/youtube'],
-        icon: Waypoints,
+        icon: YouTubeIcon,
       },
     ],
   },

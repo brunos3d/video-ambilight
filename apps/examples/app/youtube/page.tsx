@@ -6,12 +6,15 @@ const CODE = `
 'use client'
 import { YouTubeAmbilight } from '@videoglow/react-youtube'
 
-export const metadata = { title: 'YouTube' }
+export const metadata = {
+  title: 'YouTube',
+  alternates: { canonical: '/youtube' },
+}
 
 export function Player() {
   return (
     <YouTubeAmbilight
-      videoId="ASzOzrB-a9E"
+      videoId="I5QDO6BsWnU"
       glow={{ blur: 80, opacity: 0.5, saturation: 3 }}
       sync={{ driftToleranceSeconds: 0.25, checkIntervalMs: 1000 }}
     />

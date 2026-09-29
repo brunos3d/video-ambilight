@@ -66,7 +66,7 @@ export default function HomePage() {
       <section className="principles" aria-label="Design principles">
         {PRINCIPLES.map(({ icon: Icon, title, text }) => (
           <div key={title} className="principle">
-            <Icon size={18} strokeWidth={1.75} aria-hidden="true" />
+            <Icon size={18} strokeWidth={2.25} aria-hidden="true" />
             <h2>{title}</h2>
             <p>{text}</p>
           </div>
@@ -82,7 +82,7 @@ export default function HomePage() {
               return (
                 <Link key={demo.href} href={demo.href} className="card">
                   <span className="card-icon" aria-hidden="true">
-                    <Icon size={18} strokeWidth={1.75} />
+                    <Icon size={18} strokeWidth={2.25} />
                   </span>
                   <h3>{demo.title}</h3>
                   <p>{demo.summary}</p>

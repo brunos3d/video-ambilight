@@ -6,9 +6,12 @@ const CODE = `
 import { VideoAmbilight } from 'react-ambilight'
 import 'react-ambilight/dist/style.css' // still resolves; now empty
 
-export const metadata = { title: 'react-ambilight 1.x API' }
+export const metadata = {
+  title: 'react-ambilight 1.x API',
+  alternates: { canonical: '/legacy' },
+}
 
-<VideoAmbilight videoId="ASzOzrB-a9E" />
+<VideoAmbilight videoId="I5QDO6BsWnU" />
 `
 
 export default function LegacyPage() {

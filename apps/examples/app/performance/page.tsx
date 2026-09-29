@@ -1,7 +1,10 @@
 import { DemoHeader } from '@/components/demo-header'
 import { PerformanceDemo } from '@/components/performance-demo'
 
-export const metadata = { title: 'Performance' }
+export const metadata = {
+  title: 'Performance',
+  alternates: { canonical: '/performance' },
+}
 
 export default function PerformancePage() {
   return (

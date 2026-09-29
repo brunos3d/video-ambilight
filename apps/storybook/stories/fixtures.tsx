@@ -8,7 +8,7 @@ export const MEDIA = {
   portrait: '/media/pattern-vertical.webm',
 } as const
 
-export const YOUTUBE_VIDEO_ID = 'ASzOzrB-a9E'
+export const YOUTUBE_VIDEO_ID = 'I5QDO6BsWnU'
 
 /** Dark padded area so the glow has room to spill. */
 export function Stage({

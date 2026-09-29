@@ -36,7 +36,7 @@ function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
                 className="nav-link"
                 onClick={onNavigate}
               >
-                <Icon size={15} strokeWidth={1.75} aria-hidden="true" />
+                <Icon size={15} strokeWidth={2.25} aria-hidden="true" />
                 {route.title}
               </Link>
             )
@@ -73,7 +73,7 @@ function ProjectLinks() {
       </a>
       <p className="nav-label nav-label-gap">Author</p>
       <a className="footer-link" href={SITE.author.site} target="_blank" rel="noreferrer">
-        <Globe size={15} strokeWidth={1.75} aria-hidden="true" />
+        <Globe size={15} strokeWidth={2.25} aria-hidden="true" />
         <span>{SITE.author.name}</span>
         <ExternalLink size={12} aria-hidden="true" className="ml-auto opacity-50" />
       </a>

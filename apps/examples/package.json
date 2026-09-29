@@ -5,10 +5,11 @@
   "description": "Next.js App Router playground and documentation site for the @videoglow packages.",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node ../../tools/scripts/sync-storybook.mjs && next build",
     "start": "next start",
     "typecheck": "next typegen && tsc -p tsconfig.json",
-    "lint": "eslint -c ../../eslint.config.mjs ."
+    "lint": "eslint -c ../../eslint.config.mjs .",
+    "og:generate": "node scripts/generate-og-image.mts"
   },
   "dependencies": {
     "@videoglow/canvas": "workspace:^",
@@ -44,8 +45,13 @@
     ],
     "targets": {
       "build": {
+        "dependsOn": [
+          "^build",
+          "storybook:build-storybook"
+        ],
         "outputs": [
-          "{projectRoot}/.next"
+          "{projectRoot}/.next",
+          "{projectRoot}/public/storybook"
         ]
       },
       "dev": {
@@ -58,6 +64,9 @@
           "build"
         ]
       }
-    }
+    },
+    "implicitDependencies": [
+      "storybook"
+    ]
   }
 }

@@ -3,6 +3,7 @@ import type { ReactNode } from 'react'
 import { Bricolage_Grotesque, Instrument_Sans, JetBrains_Mono, Geist } from 'next/font/google'
 import { SiteShell } from '@/components/site-shell'
 import { SITE } from '@/lib/site'
+import { SEO } from '@/lib/seo'
 import './globals.css'
 import { cn } from '@/lib/utils'
 
@@ -18,17 +19,32 @@ const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' })
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: { default: 'videoglow', template: '%s · videoglow' },
-  description: SITE.description,
-  icons: { icon: '/icon.svg' },
+  title: { default: SEO.title, template: '%s · videoglow' },
+  description: SEO.description,
+  keywords: [...SEO.keywords],
+  applicationName: 'videoglow',
   authors: [{ name: SITE.author.name, url: SITE.author.site }],
+  creator: SITE.author.name,
+  category: 'technology',
+  icons: { icon: '/icon.svg' },
+  alternates: { canonical: '/' },
+  robots: { index: true, follow: true },
   openGraph: {
-    title: 'videoglow',
-    description: SITE.description,
+    type: 'website',
+    locale: 'en_US',
     url: SITE.url,
     siteName: 'videoglow',
-    images: ['/videoglow-logo.svg'],
-    type: 'website',
+    title: SEO.ogTitle,
+    description: SEO.description,
+    images: [
+      { url: '/og-image.png', width: 1200, height: 630, alt: SEO.ogTitle, type: 'image/png' },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: SEO.ogTitle,
+    description: SEO.description,
+    images: ['/og-image.png'],
   },
 }
 

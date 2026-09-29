@@ -177,7 +177,7 @@ import { YouTubeAmbilight } from '@videoglow/react-youtube'
 export function Player() {
   return (
     <YouTubeAmbilight
-      videoId="ASzOzrB-a9E"
+      videoId="I5QDO6BsWnU"
       glow={{ blur: 80, opacity: 0.5, saturation: 3 }}
       sync={{ driftToleranceSeconds: 0.25, checkIntervalMs: 1000 }}
     />
@@ -285,7 +285,7 @@ pnpm test             # unit tests (Vitest)
 pnpm lint
 pnpm typecheck
 pnpm dev              # examples app on http://localhost:3000
-pnpm storybook        # Storybook on http://localhost:6006
+pnpm storybook        # Storybook on http://localhost:6006 (also served at /storybook on the site)
 pnpm e2e              # Playwright against the built examples app
 pnpm graph            # Nx project graph
 ```

@@ -1,7 +1,10 @@
 import { DemoHeader } from '@/components/demo-header'
 import { ConfigurationDemo } from '@/components/configuration-demo'
 
-export const metadata = { title: 'Configuration' }
+export const metadata = {
+  title: 'Configuration',
+  alternates: { canonical: '/configuration' },
+}
 
 export default function ConfigurationPage() {
   return (

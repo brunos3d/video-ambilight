@@ -36,7 +36,7 @@ export function Player() {
   return (
     <YouTubeAmbilight
       ref={handle}
-      videoId="ASzOzrB-a9E"
+      videoId="I5QDO6BsWnU"
       playerVars={{ rel: 0 }}
       glow={{ blur: 80, opacity: 0.5, saturation: 3, scale: 1.2 }}
       sync={{ driftToleranceSeconds: 0.25, checkIntervalMs: 1000 }}

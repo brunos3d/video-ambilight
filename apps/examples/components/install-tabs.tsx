@@ -36,7 +36,7 @@ export function InstallTabs({
       <Tabs value={manager} onValueChange={select}>
         <div className="flex flex-wrap items-center justify-between gap-3">
           <h2 className="!mb-0">
-            <PackageOpen size={14} strokeWidth={1.75} aria-hidden="true" />
+            <PackageOpen size={14} strokeWidth={2.25} aria-hidden="true" />
             {title}
           </h2>
           <TabsList aria-label="Package manager">

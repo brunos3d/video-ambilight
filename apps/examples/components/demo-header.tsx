@@ -9,7 +9,7 @@ export function DemoHeader({ route, children }: { route: DemoHref; children?: Re
   return (
     <header className="demo-header">
       <p className="eyebrow">
-        <Icon size={14} strokeWidth={1.75} aria-hidden="true" />
+        <Icon size={14} strokeWidth={2.25} aria-hidden="true" />
         Demo
       </p>
       <h1>{demo.title}</h1>

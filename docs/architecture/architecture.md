@@ -228,7 +228,9 @@ browser globals.
 
 `apps/examples` is a Next.js 16 App Router application. Pages are server
 components that render small client components which use the packages. The
-site doubles as documentation and as the Playwright test target. It deploys
+site doubles as documentation and as the Playwright test target. The static
+Storybook build is copied into `public/storybook` during the app build and
+served at `/storybook` on the same domain. It deploys
 to Vercel at https://videoglow.brunosilva.io with `apps/examples` as the
 project root directory; see `docs/deployment.md`.
 
@@ -259,8 +261,8 @@ access is needed for non-YouTube tests.
 
 `nx release` with conventional commits, fixed versioning across the
 `@videoglow/*` group, `react-ambilight` released alongside as a compatibility
-package. The release workflow is manual dispatch and dry-runs by default until
-an `NPM_TOKEN` secret exists. See `docs/releasing.md`.
+package. Releases run locally by a maintainer; CI only verifies. See
+`docs/releasing.md`.
 
 ## Open risks
 

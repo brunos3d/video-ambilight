@@ -15,7 +15,7 @@ pnpm test
 ```
 apps/examples        Next.js 16 App Router site (videoglow.brunosilva.io, e2e target)
 apps/examples-e2e    Playwright tests
-apps/storybook       Storybook host; stories live in apps/storybook/stories
+apps/storybook       Storybook host; stories live in apps/storybook/stories; its static build ships inside the site at /storybook
 packages/*           publishable packages
 tools/tsup           shared build config
 tools/vitest         shared test config and jsdom setup
@@ -56,6 +56,15 @@ Test clips are generated with ffmpeg:
 
 ```bash
 pnpm fixtures:media
+```
+
+## Open Graph image
+
+The social preview is a static file, `apps/examples/public/og-image.png`.
+Regenerate it after changing the copy in `apps/examples/lib/seo.ts`:
+
+```bash
+pnpm --filter examples og:generate
 ```
 
 ## Commits

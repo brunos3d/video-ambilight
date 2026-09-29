@@ -8,7 +8,10 @@ import { useState } from 'react'
 import { useAmbilight, useFrameSource } from '@videoglow/react'
 import { createVideoSource } from '@videoglow/video'
 
-export const metadata = { title: 'React hooks' }
+export const metadata = {
+  title: 'React hooks',
+  alternates: { canonical: '/react' },
+}
 
 export function Figure() {
   const [figure, setFigure] = useState<HTMLElement | null>(null)

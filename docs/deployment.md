@@ -24,7 +24,9 @@ the build must run through Nx to build the packages first.
 }
 ```
 
-`nx build examples` builds the eight packages and then runs `next build`.
+`nx build examples` builds the eight packages, builds Storybook, copies it
+into `apps/examples/public/storybook` and then runs `next build`, so the site
+serves Storybook at `/storybook`.
 Nx caching is local only; add Nx Cloud if build times matter.
 
 ## Environment
