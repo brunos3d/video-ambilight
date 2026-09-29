@@ -1,0 +1,64 @@
+{
+  "name": "react-ambilight",
+  "version": "2.0.0",
+  "description": "Compatibility package for react-ambilight 1.x. Re-exports the YouTube Ambilight component from @videoglow/react-youtube.",
+  "license": "MIT",
+  "author": "Bruno Silva <foss@brunosilva.io>",
+  "homepage": "https://github.com/brunos3d/video-ambilight#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunos3d/video-ambilight.git",
+    "directory": "packages/react-ambilight"
+  },
+  "keywords": [
+    "ambilight",
+    "react",
+    "youtube",
+    "video",
+    "effect",
+    "nextjs"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./dist/style.css": "./dist/style.css",
+    "./style.css": "./dist/style.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint -c ../../eslint.config.mjs ."
+  },
+  "dependencies": {
+    "@videoglow/react-youtube": "workspace:^",
+    "@videoglow/youtube": "workspace:^"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0 || ^19.0.0",
+    "react-dom": "^18.2.0 || ^19.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "nx": {
+    "tags": [
+      "layer:compat"
+    ]
+  }
+}
