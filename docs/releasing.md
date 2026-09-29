@@ -10,33 +10,32 @@ never mix versions.
 - The `@videoglow` npm organization must exist and the publishing account
   must be a member. Creating the organization is a one-time action on
   npmjs.com.
-- An `NPM_TOKEN` repository secret with publish rights (automation token).
 - `react-ambilight` is published from the same workflow; the account must own
   it.
 
+Releases run from a maintainer's machine; there is no release workflow in
+GitHub Actions.
+
 ## Dry run
-
-The `Release` workflow (Actions tab, `workflow_dispatch`) runs a dry run by
-default: it builds and verifies the packages, then prints the versions and
-changelogs that would be produced.
-
-Locally:
 
 ```bash
 pnpm exec nx run-many -t build --projects='packages/*'
 node tools/scripts/verify-packages.mjs
-pnpm exec nx release --dry-run
+pnpm exec nx release --dry-run            # add --first-release before the first tag exists
 ```
 
 ## Publishing
 
-Run the `Release` workflow with `publish` checked. Optionally pass an explicit
-bump (`patch`, `minor`, `major`, `prerelease`) or version. The workflow:
+```bash
+npm login                                  # member of the @videoglow organization
+pnpm exec nx release --first-release       # omit --first-release after the first tag
+git push --follow-tags
+```
 
-1. Builds the packages.
-2. Verifies package contents (`tools/scripts/verify-packages.mjs`).
-3. Bumps versions, writes changelogs, commits and tags.
-4. Publishes to npm and creates a GitHub release.
+`nx release` builds the packages (pre-version command), bumps versions from
+conventional commits, writes changelogs, commits, tags and publishes. Pass an
+explicit bump (`patch`, `minor`, `major`, `prerelease`) or version when the
+commit history should not decide it.
 
 ## What gets published
 

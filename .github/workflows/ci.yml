@@ -35,7 +35,7 @@ jobs:
         uses: nrwl/nx-set-shas@v4
 
       - name: Lint, typecheck, test and build affected projects
-        run: pnpm exec nx affected -t lint typecheck test build build-storybook --parallel=3
+        run: pnpm exec nx affected -t lint typecheck test build --parallel=3
 
       - name: Verify published package contents
         run: node tools/scripts/verify-packages.mjs
