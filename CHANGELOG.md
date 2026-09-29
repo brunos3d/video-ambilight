@@ -1,0 +1,299 @@
+# 2.0.0 (2026-09-29)
+
+### 🚀 Features
+
+- added sample pages ([23557cb](https://github.com/brunos3d/video-ambilight/commit/23557cb))
+- add ambilight component with nextjs example ([8649f24](https://github.com/brunos3d/video-ambilight/commit/8649f24))
+- after years this bullshit has a npm package ([8cad687](https://github.com/brunos3d/video-ambilight/commit/8cad687))
+- ⚠️  redesign as the videoglow monorepo with a framework-agnostic core ([#3](https://github.com/brunos3d/video-ambilight/pull/3))
+- **examples:** redesign the documentation site ([b0f4a23](https://github.com/brunos3d/video-ambilight/commit/b0f4a23))
+- **examples:** embed storybook, static og image and seo metadata ([906540d](https://github.com/brunos3d/video-ambilight/commit/906540d))
+- **examples:** surface the storybook link in the main nav and home hero ([646e587](https://github.com/brunos3d/video-ambilight/commit/646e587))
+- **examples:** put storybook in the main nav and hero, npm first in install tabs ([37138b1](https://github.com/brunos3d/video-ambilight/commit/37138b1))
+
+### 🩹 Fixes
+
+- nextjs ambilight blur ([51f5a57](https://github.com/brunos3d/video-ambilight/commit/51f5a57))
+- ambilight layout ([25fb986](https://github.com/brunos3d/video-ambilight/commit/25fb986))
+- ambilight refresh area ([9f1d852](https://github.com/brunos3d/video-ambilight/commit/9f1d852))
+- solve github pages home page issue ([fb84dc7](https://github.com/brunos3d/video-ambilight/commit/fb84dc7))
+- rename all video-ambilight refs to react-ambilight ([def8598](https://github.com/brunos3d/video-ambilight/commit/def8598))
+- broken example links ([7864eb9](https://github.com/brunos3d/video-ambilight/commit/7864eb9))
+- use older versions of openssl ([7c5ad66](https://github.com/brunos3d/video-ambilight/commit/7c5ad66))
+- remove size limit ([4505d6a](https://github.com/brunos3d/video-ambilight/commit/4505d6a))
+- test issues by removing tests ¯\_(ツ)_/¯ ([6d244be](https://github.com/brunos3d/video-ambilight/commit/6d244be))
+- update peerDeps versions ([2dd9e11](https://github.com/brunos3d/video-ambilight/commit/2dd9e11))
+- remove vite-plugin-lib-inject-css plugin ([74df034](https://github.com/brunos3d/video-ambilight/commit/74df034))
+- remove assets path from output bundle ([e0d6b05](https://github.com/brunos3d/video-ambilight/commit/e0d6b05))
+- use latest version ([009b042](https://github.com/brunos3d/video-ambilight/commit/009b042))
+- use latest version ([3127a6b](https://github.com/brunos3d/video-ambilight/commit/3127a6b))
+- update demo link for nextjs on vercel example ([b02c1cb](https://github.com/brunos3d/video-ambilight/commit/b02c1cb))
+
+### ⚠️  Breaking Changes
+
+- redesign as the videoglow monorepo with a framework-agnostic core  ([#3](https://github.com/brunos3d/video-ambilight/pull/3))
+  react-ambilight drops React 16 and 17 and no longer seeks the YouTube follower on every animation frame."
+  A	.github/workflows/ci.yml
+  A	.github/workflows/release.yml
+  M	.gitignore
+  A	.npmrc
+  A	.prettierignore
+  A	.prettierrc
+  A	CONTRIBUTING.md
+  M	README.md
+  A	apps/examples-e2e/.gitignore
+  A	apps/examples-e2e/e2e/baseline.spec.ts
+  A	apps/examples-e2e/e2e/baseline.spec.ts-snapshots/baseline-reference-chromium-linux.png
+  A	apps/examples-e2e/e2e/canvas.spec.ts
+  A	apps/examples-e2e/e2e/configuration.spec.ts
+  A	apps/examples-e2e/e2e/core.spec.ts
+  A	apps/examples-e2e/e2e/helpers.ts
+  A	apps/examples-e2e/e2e/native-video.spec.ts
+  A	apps/examples-e2e/e2e/performance.spec.ts
+  A	apps/examples-e2e/e2e/react.spec.ts
+  A	apps/examples-e2e/e2e/visual.spec.ts
+  A	apps/examples-e2e/e2e/youtube.spec.ts
+  A	apps/examples-e2e/package.json
+  A	apps/examples-e2e/playwright.config.ts
+  A	apps/examples-e2e/tsconfig.json
+  A	apps/examples/.gitignore
+  A	apps/examples/app/baseline/page.tsx
+  A	apps/examples/app/canvas/page.tsx
+  A	apps/examples/app/configuration/page.tsx
+  A	apps/examples/app/core/page.tsx
+  A	apps/examples/app/globals.css
+  A	apps/examples/app/icon.svg
+  A	apps/examples/app/layout.tsx
+  A	apps/examples/app/legacy/page.tsx
+  A	apps/examples/app/native-video/page.tsx
+  A	apps/examples/app/page.tsx
+  A	apps/examples/app/performance/page.tsx
+  A	apps/examples/app/react/page.tsx
+  A	apps/examples/app/youtube/page.tsx
+  A	apps/examples/components/baseline-demo.tsx
+  A	apps/examples/components/canvas-demo.tsx
+  A	apps/examples/components/code-block.tsx
+  A	apps/examples/components/configuration-demo.tsx
+  A	apps/examples/components/core-demo.tsx
+  A	apps/examples/components/demo-header.tsx
+  A	apps/examples/components/legacy-demo.tsx
+  A	apps/examples/components/logo.tsx
+  A	apps/examples/components/native-video-demo.tsx
+  A	apps/examples/components/nav.tsx
+  A	apps/examples/components/performance-demo.tsx
+  A	apps/examples/components/react-demo.tsx
+  A	apps/examples/components/stats-panel.tsx
+  A	apps/examples/components/youtube-demo.tsx
+  A	apps/examples/lib/media.ts
+  A	apps/examples/lib/site.ts
+  A	apps/examples/next.config.ts
+  A	apps/examples/package.json
+  A	apps/examples/public/media/pattern-vertical.webm
+  A	apps/examples/public/media/pattern.webm
+  A	apps/examples/public/videoglow-logo.svg
+  A	apps/examples/tsconfig.json
+  A	apps/examples/vercel.json
+  A	apps/storybook/.gitignore
+  A	apps/storybook/.storybook/main.ts
+  A	apps/storybook/.storybook/manager-head.html
+  A	apps/storybook/.storybook/manager.ts
+  A	apps/storybook/.storybook/preview.ts
+  A	apps/storybook/package.json
+  A	apps/storybook/stories/canvas-source.stories.tsx
+  A	apps/storybook/stories/fixtures.tsx
+  A	apps/storybook/stories/glow-configuration.stories.tsx
+  A	apps/storybook/stories/layout.stories.tsx
+  A	apps/storybook/stories/native-video.stories.tsx
+  A	apps/storybook/stories/react-integration.stories.tsx
+  A	apps/storybook/stories/sampling.stories.tsx
+  A	apps/storybook/stories/youtube.stories.tsx
+  A	apps/storybook/tsconfig.json
+  D	docs/README.md
+  A	docs/architecture/architecture.md
+  A	docs/architecture/browser-research.md
+  A	docs/architecture/discovery.md
+  A	docs/architecture/migration.md
+  A	docs/architecture/package-naming.md
+  D	docs/canvas/index.html
+  D	docs/canvas/main.js
+  D	docs/canvas/styles.css
+  A	docs/deployment.md
+  D	docs/images/video-canvas.png
+  A	docs/images/videoglow-logo.svg
+  D	docs/index.html
+  D	docs/nextjs/.eslintrc.json
+  D	docs/nextjs/.gitignore
+  D	docs/nextjs/README.md
+  D	docs/nextjs/next-env.d.ts
+  D	docs/nextjs/next.config.js
+  D	docs/nextjs/package-lock.json
+  D	docs/nextjs/package.json
+  D	docs/nextjs/public/favicon.ico
+  D	docs/nextjs/public/vercel.svg
+  D	docs/nextjs/src/pages/_app.tsx
+  D	docs/nextjs/src/pages/index.tsx
+  D	docs/nextjs/src/styles/globals.css
+  D	docs/nextjs/src/types.ts
+  D	docs/nextjs/tsconfig.json
+  A	docs/releasing.md
+  D	docs/youtube/index.html
+  D	docs/youtube/main.js
+  D	docs/youtube/styles.css
+  A	eslint.config.mjs
+  A	nx.json
+  A	package.json
+  A	packages/canvas/LICENSE
+  A	packages/canvas/README.md
+  A	packages/canvas/package.json
+  A	packages/canvas/src/canvas-source.test.ts
+  A	packages/canvas/src/canvas-source.ts
+  A	packages/canvas/src/image-source.test.ts
+  A	packages/canvas/src/image-source.ts
+  A	packages/canvas/src/index.ts
+  A	packages/canvas/tsconfig.build.json
+  A	packages/canvas/tsconfig.json
+  A	packages/canvas/tsup.config.ts
+  A	packages/canvas/vitest.config.ts
+  A	packages/core/LICENSE
+  A	packages/core/README.md
+  A	packages/core/package.json
+  A	packages/core/src/ambilight.test.ts
+  A	packages/core/src/ambilight.ts
+  A	packages/core/src/buffer-size.test.ts
+  A	packages/core/src/buffer-size.ts
+  A	packages/core/src/canvas-glow-renderer.test.ts
+  A	packages/core/src/canvas-glow-renderer.ts
+  A	packages/core/src/emitter.ts
+  A	packages/core/src/environment.ts
+  A	packages/core/src/frame-clock.test.ts
+  A	packages/core/src/frame-clock.ts
+  A	packages/core/src/glow-style.test.ts
+  A	packages/core/src/glow-style.ts
+  A	packages/core/src/index.ts
+  A	packages/core/src/test-utils/fakes.ts
+  A	packages/core/src/types.ts
+  A	packages/core/src/visibility-gate.test.ts
+  A	packages/core/src/visibility-gate.ts
+  A	packages/core/tsconfig.build.json
+  A	packages/core/tsconfig.json
+  A	packages/core/tsup.config.ts
+  A	packages/core/vitest.config.ts
+  D	packages/react-ambilight/.browserslistrc
+  D	packages/react-ambilight/.eslintrc.cjs
+  D	packages/react-ambilight/.gitignore
+  D	packages/react-ambilight/.prettierignore
+  D	packages/react-ambilight/.prettierrc
+  D	packages/react-ambilight/.storybook/main.ts
+  D	packages/react-ambilight/.storybook/preview.ts
+  D	packages/react-ambilight/.stylelintignore
+  D	packages/react-ambilight/.stylelintrc.mjs
+  D	packages/react-ambilight/.vscode/settings.json
+  D	packages/react-ambilight/CONTRIBUTING.md
+  M	packages/react-ambilight/LICENSE
+  M	packages/react-ambilight/README.md
+  D	packages/react-ambilight/package-lock.json
+  M	packages/react-ambilight/package.json
+  D	packages/react-ambilight/postcss.config.cjs
+  A	packages/react-ambilight/public/style.css
+  D	packages/react-ambilight/src/components/VideoAmbilight/VideoAmbilight.stories.ts
+  D	packages/react-ambilight/src/components/VideoAmbilight/index.tsx
+  D	packages/react-ambilight/src/components/VideoAmbilight/styles.module.css
+  D	packages/react-ambilight/src/hooks/useUniqueId.ts
+  A	packages/react-ambilight/src/index.ts
+  A	packages/react-ambilight/src/legacy-types.ts
+  D	packages/react-ambilight/src/main.ts
+  D	packages/react-ambilight/src/types/youtube-player.ts
+  A	packages/react-ambilight/src/video-ambilight.test.tsx
+  A	packages/react-ambilight/src/video-ambilight.tsx
+  D	packages/react-ambilight/src/vite-env.d.ts
+  A	packages/react-ambilight/tsconfig.build.json
+  M	packages/react-ambilight/tsconfig.json
+  D	packages/react-ambilight/tsconfig.node.json
+  A	packages/react-ambilight/tsup.config.ts
+  D	packages/react-ambilight/vite.config.ts
+  A	packages/react-ambilight/vitest.config.ts
+  A	packages/react-video/LICENSE
+  A	packages/react-video/README.md
+  A	packages/react-video/package.json
+  A	packages/react-video/src/index.ts
+  A	packages/react-video/src/use-video-source.ts
+  A	packages/react-video/src/video-ambilight.test.tsx
+  A	packages/react-video/src/video-ambilight.tsx
+  A	packages/react-video/tsconfig.build.json
+  A	packages/react-video/tsconfig.json
+  A	packages/react-video/tsup.config.ts
+  A	packages/react-video/vitest.config.ts
+  A	packages/react-youtube/LICENSE
+  A	packages/react-youtube/README.md
+  A	packages/react-youtube/package.json
+  A	packages/react-youtube/src/index.ts
+  A	packages/react-youtube/src/use-youtube-ambilight.ts
+  A	packages/react-youtube/src/youtube-ambilight.test.tsx
+  A	packages/react-youtube/src/youtube-ambilight.tsx
+  A	packages/react-youtube/tsconfig.build.json
+  A	packages/react-youtube/tsconfig.json
+  A	packages/react-youtube/tsup.config.ts
+  A	packages/react-youtube/vitest.config.ts
+  A	packages/react/LICENSE
+  A	packages/react/README.md
+  A	packages/react/package.json
+  A	packages/react/src/ambilight.test.tsx
+  A	packages/react/src/ambilight.tsx
+  A	packages/react/src/element-input.ts
+  A	packages/react/src/index.ts
+  A	packages/react/src/test-utils/fakes.ts
+  A	packages/react/src/use-ambilight-state.test.tsx
+  A	packages/react/src/use-ambilight-state.ts
+  A	packages/react/src/use-ambilight.ts
+  A	packages/react/src/use-frame-source.test.tsx
+  A	packages/react/src/use-frame-source.ts
+  A	packages/react/src/use-latest.ts
+  A	packages/react/src/use-owned-resource.ts
+  A	packages/react/tsconfig.build.json
+  A	packages/react/tsconfig.json
+  A	packages/react/tsup.config.ts
+  A	packages/react/vitest.config.ts
+  A	packages/video/LICENSE
+  A	packages/video/README.md
+  A	packages/video/package.json
+  A	packages/video/src/index.ts
+  A	packages/video/src/test-utils/fake-video.ts
+  A	packages/video/src/video-source.test.ts
+  A	packages/video/src/video-source.ts
+  A	packages/video/tsconfig.build.json
+  A	packages/video/tsconfig.json
+  A	packages/video/tsup.config.ts
+  A	packages/video/vitest.config.ts
+  A	packages/youtube/LICENSE
+  A	packages/youtube/README.md
+  A	packages/youtube/package.json
+  A	packages/youtube/src/create-youtube-ambilight.test.ts
+  A	packages/youtube/src/create-youtube-ambilight.ts
+  A	packages/youtube/src/iframe-api/loader.test.ts
+  A	packages/youtube/src/iframe-api/loader.ts
+  A	packages/youtube/src/iframe-api/types.ts
+  A	packages/youtube/src/index.ts
+  A	packages/youtube/src/player/player-controller.test.ts
+  A	packages/youtube/src/player/player-controller.ts
+  A	packages/youtube/src/sync/playback-coordinator.test.ts
+  A	packages/youtube/src/sync/playback-coordinator.ts
+  A	packages/youtube/src/test-utils/fake-iframe-api.ts
+  A	packages/youtube/tsconfig.build.json
+  A	packages/youtube/tsconfig.json
+  A	packages/youtube/tsup.config.ts
+  A	packages/youtube/vitest.config.ts
+  A	pnpm-lock.yaml
+  A	pnpm-workspace.yaml
+  A	tools/scripts/generate-media-fixtures.mjs
+  A	tools/scripts/scaffold-package.mjs
+  A	tools/scripts/verify-packages.mjs
+  A	tools/tsconfig.json
+  A	tools/tsup/base.ts
+  A	tools/vitest/base.mts
+  A	tools/vitest/setup.ts
+  A	tsconfig.base.json
+
+### ❤️ Thank You
+
+- Bruno Silva
+- brunos3d
