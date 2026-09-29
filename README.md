@@ -1,45 +1,257 @@
-# Video Ambilight 🌈✨
+<p align="center">
+  <img alt="videoglow logo" src="./docs/images/videoglow-logo.svg" width="96" height="96" />
+</p>
+
+# videoglow
+
+Ambilight style glow behind video, canvas and YouTube content, built as a
+small family of npm packages with a framework-agnostic core.
 
 <p align="center">
-  <a href="https://brunos3d.github.io/video-ambilight/">
-    <img alt="React Ambilight Preview" src="./docs/images/youtube.png" />
+  <a href="https://video-ambilight.vercel.app/">
+    <img alt="Ambilight glow behind a YouTube player" src="./docs/images/youtube.png" width="720" />
   </a>
 </p>
 
-## 📖 About the Project
+Live examples: https://video-ambilight.vercel.app
 
-This project provides a **React component for creating Ambilight effects** with YouTube videos or HTML video elements. It also includes different demos and an example of the component integration in various environments like plain HTML and Next.js.
+## How it works
 
-## 🚀 Getting Started
+A frame source (a `<video>`, a canvas, an image) is sampled into a small canvas
+placed behind the source. CSS `filter: blur()` on that canvas produces the glow
+on the compositor, so no pixels are ever read back into JavaScript and the
+effect works on cross-origin media without CORS headers. Video sources are
+sampled through `requestVideoFrameCallback` and capped at 30 fps by default.
 
-To get started with the `react-ambilight` component, you can install it via npm using the following command:
+YouTube iframes cannot be sampled (the browser never exposes cross-origin
+iframe pixels), so the YouTube package runs a second, muted player under the
+same CSS and keeps it aligned with the visible one through an explicit
+synchronization policy.
+
+## Packages
+
+| Package                                                | Purpose                                                                  | Depends on     |
+| ------------------------------------------------------ | ------------------------------------------------------------------------ | -------------- |
+| [`@videoglow/core`](./packages/core)                   | Engine: frame sources, frame clock, canvas glow renderer, glow style     | nothing        |
+| [`@videoglow/video`](./packages/video)                 | `HTMLVideoElement` frame source                                          | core           |
+| [`@videoglow/canvas`](./packages/canvas)               | Canvas, `OffscreenCanvas`, `ImageBitmap` and image frame sources         | core           |
+| [`@videoglow/youtube`](./packages/youtube)             | YouTube IFrame API loader, typed player controller, playback coordinator | core           |
+| [`@videoglow/react`](./packages/react)                 | `Ambilight` component, `useAmbilight`, `useFrameSource`                  | core, react    |
+| [`@videoglow/react-video`](./packages/react-video)     | `VideoAmbilight` component, `useVideoSource`                             | react, video   |
+| [`@videoglow/react-youtube`](./packages/react-youtube) | `YouTubeAmbilight` component, `useYouTubeAmbilight`                      | react, youtube |
+| [`react-ambilight`](./packages/react-ambilight)        | Compatibility wrapper with the 1.x API                                   | react-youtube  |
+
+Dependency direction is always towards the core. Framework packages never leak
+into source packages.
+
+## Installation
 
 ```bash
-npm install react-ambilight
+# native <video> in React
+pnpm add @videoglow/react-video
+
+# YouTube in React
+pnpm add @videoglow/react-youtube
+
+# a canvas you draw yourself, in React
+pnpm add @videoglow/react @videoglow/canvas
+
+# no React
+pnpm add @videoglow/core @videoglow/video
 ```
 
-Please refer to the [package README](./packages/react-ambilight/README.md) for detailed installation and usage instructions.
+React 18.2 and 19 are supported. The packages ship ESM and CommonJS builds
+with declarations.
 
-https://www.npmjs.com/react-ambilight
+## React: native video
 
-## 📂 Project Structure
+```tsx
+'use client'
+import { VideoAmbilight } from '@videoglow/react-video'
 
-The project is organized into the following directories:
+export function Player() {
+  return <VideoAmbilight src="/clip.webm" controls muted loop autoPlay playsInline blur={80} />
+}
+```
 
-- **`docs/`**: Contains demo projects showcasing the use of the Ambilight component in different environments.
-  - **`canvas/`**: A demo using a simple HTML5 `<canvas>` element.
-  - **`images/`**: Contains images used in the demos.
-  - **`nextjs/`**: A demo for integrating the component in a Next.js project.
-  - **`youtube/`**: A demo for integrating the component with YouTube videos.
-- **`packages/`**: Contains the `react-ambilight` component package for NPM distribution.
-  - **`react-ambilight/`**: The React component package. This can be published to NPM and used in any React project.
-  - It also includes configuration files for building and distributing the package.
-- **`LICENSE`**: The project's license file.
+All video attributes are forwarded to the `<video>` element. The `ref` points
+at the video, `ambilightRef` receives the engine instance.
 
-## 📄 License
+## React: your own markup
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+```tsx
+'use client'
+import { useState } from 'react'
+import { useAmbilight, useFrameSource } from '@videoglow/react'
+import { createVideoSource } from '@videoglow/video'
 
----
+export function Figure() {
+  const [figure, setFigure] = useState<HTMLElement | null>(null)
+  const [source, videoRef] = useFrameSource((video: HTMLVideoElement) => createVideoSource(video))
+  useAmbilight({ container: figure, source, blur: 60 })
+  return (
+    <figure ref={setFigure}>
+      <video ref={videoRef} src="/clip.webm" controls muted loop />
+    </figure>
+  )
+}
+```
 
-💻 **Made with love by [Bruno](https://github.com/brunos3d)**
+## React: canvas
+
+```tsx
+'use client'
+import { createCanvasSource } from '@videoglow/canvas'
+import { Ambilight, useFrameSource } from '@videoglow/react'
+
+export function Visualizer() {
+  const [source, ref] = useFrameSource((el: HTMLCanvasElement) =>
+    createCanvasSource(el, { mode: 'continuous' })
+  )
+  return (
+    <Ambilight source={source} blur={70}>
+      <canvas ref={ref} width={640} height={360} />
+    </Ambilight>
+  )
+}
+```
+
+Use `mode: 'manual'` and call `source.invalidate()` after drawing when the
+canvas does not animate continuously.
+
+## React: YouTube
+
+```tsx
+'use client'
+import { YouTubeAmbilight } from '@videoglow/react-youtube'
+
+export function Player() {
+  return (
+    <YouTubeAmbilight
+      videoId="ASzOzrB-a9E"
+      glow={{ blur: 80, opacity: 0.5, saturation: 3 }}
+      sync={{ driftToleranceSeconds: 0.25, checkIntervalMs: 1000 }}
+    />
+  )
+}
+```
+
+## Without React
+
+```ts
+import { createAmbilight } from '@videoglow/core'
+import { createVideoSource } from '@videoglow/video'
+
+const video = document.querySelector('video')!
+const source = createVideoSource(video)
+const ambilight = createAmbilight({ container: video.parentElement!, source, blur: 80 })
+
+ambilight.update({ blur: 40 })
+ambilight.getState() // frames rendered, buffer size, timings
+ambilight.dispose()
+source.dispose()
+```
+
+The engine mounts a canvas as the first child of the container and makes the
+container a positioned, isolated stacking context. The source element stays in
+normal flow and paints above the glow.
+
+## Next.js
+
+The React packages are client components: every entry point starts with
+`'use client'`, and no module touches browser globals at import time. Import
+them from a client component in the App Router:
+
+```tsx
+// app/player.tsx
+'use client'
+import { VideoAmbilight } from '@videoglow/react-video'
+
+export function Player() {
+  return <VideoAmbilight src="/clip.webm" muted loop autoPlay playsInline />
+}
+```
+
+```tsx
+// app/page.tsx (server component)
+import { Player } from './player'
+
+export default function Page() {
+  return <Player />
+}
+```
+
+`apps/examples` in this repository is a complete Next.js 16 App Router
+application built this way.
+
+## Configuration
+
+| Option               | Default | Effect                                          |
+| -------------------- | ------- | ----------------------------------------------- |
+| `blur`               | 80      | CSS blur radius in px                           |
+| `opacity`            | 0.5     | Glow layer opacity                              |
+| `saturation`         | 3       | Saturation multiplier                           |
+| `brightness`         | 1       | Brightness multiplier                           |
+| `scale`              | 1.15    | How far the glow spills past the source box     |
+| `fps`                | 30      | Sampling cap; 0 removes the cap                 |
+| `resolution`         | 160     | Long edge of the internal buffer in px          |
+| `pauseWhenHidden`    | true    | Stop sampling in hidden tabs                    |
+| `pauseWhenOffscreen` | true    | Stop sampling when the glow leaves the viewport |
+
+Style options are CSS on the glow layer and cost nothing per frame. `fps` and
+`resolution` bound the per-frame draw cost.
+
+## Performance
+
+The only main-thread work per frame is one `drawImage` into a small buffer
+(160x90 by default). On a laptop iGPU that takes well under 0.1 ms. The blur
+runs on the compositor when the layer changes. The `/performance` page in the
+examples app runs a benchmark across buffer sizes on your device.
+
+YouTube synchronization issues one `postMessage` round trip per drift check
+(once per second while playing) plus one call per leader state change. There
+is no per-frame work.
+
+## Browser support and limitations
+
+- `requestVideoFrameCallback`: Chrome 83, Edge 83, Safari 15.4, Firefox 132.
+  Older browsers fall back to `requestAnimationFrame` polling automatically.
+- Cross-origin video without CORS works for the glow. Reading the glow's
+  pixels yourself (`getImageData`) needs `crossorigin="anonymous"` and CORS
+  headers on the media.
+- YouTube: pixels cannot be read from the iframe. The second player downloads
+  the stream a second time. Quality cannot be lowered through the API
+  (`setPlaybackQuality` has been a no-op since 2019).
+- Safari does not fire `requestVideoFrameCallback` for DRM streams; the video
+  source detects this and falls back after one second.
+
+## Repository
+
+Nx monorepo managed with pnpm.
+
+```bash
+pnpm install
+pnpm build            # all packages
+pnpm test             # unit tests (Vitest)
+pnpm lint
+pnpm typecheck
+pnpm dev              # examples app on http://localhost:3000
+pnpm storybook        # Storybook on http://localhost:6006
+pnpm e2e              # Playwright against the built examples app
+pnpm graph            # Nx project graph
+```
+
+Documentation:
+
+- [Architecture](./docs/architecture/architecture.md)
+- [Discovery of the original implementation](./docs/architecture/discovery.md)
+- [Browser and YouTube API research](./docs/architecture/browser-research.md)
+- [Package naming](./docs/architecture/package-naming.md)
+- [Migration from react-ambilight 1.x](./docs/architecture/migration.md)
+- [Deployment to Vercel](./docs/deployment.md)
+- [Releasing](./docs/releasing.md)
+- [Contributing](./CONTRIBUTING.md)
+
+## License
+
+MIT. See [LICENSE](./LICENSE).
