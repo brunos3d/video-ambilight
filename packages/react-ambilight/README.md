@@ -6,10 +6,22 @@ component API and implements it on top of
 
 New projects should install `@videoglow/react-youtube` directly.
 
+Live examples and documentation: https://videoglow.brunosilva.io
+
 ## Install
 
 ```bash
+# npm
+npm install react-ambilight
+
+# pnpm
 pnpm add react-ambilight
+
+# yarn
+yarn add react-ambilight
+
+# bun
+bun add react-ambilight
 ```
 
 React 18.2 and 19 (React 16 and 17 are no longer supported).

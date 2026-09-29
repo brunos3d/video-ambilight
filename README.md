@@ -8,12 +8,12 @@ Ambilight style glow behind video, canvas and YouTube content, built as a
 small family of npm packages with a framework-agnostic core.
 
 <p align="center">
-  <a href="https://video-ambilight.vercel.app/">
+  <a href="https://videoglow.brunosilva.io/">
     <img alt="Ambilight glow behind a YouTube player" src="./docs/images/youtube.png" width="720" />
   </a>
 </p>
 
-Live examples: https://video-ambilight.vercel.app
+Live examples and documentation: https://videoglow.brunosilva.io
 
 ## How it works
 
@@ -46,18 +46,71 @@ into source packages.
 
 ## Installation
 
+Pick the package for your use case. Every package ships ESM and CommonJS builds
+with declarations.
+
+Native `<video>` in React:
+
 ```bash
-# native <video> in React
+# npm
+npm install @videoglow/react-video
+
+# pnpm
 pnpm add @videoglow/react-video
 
-# YouTube in React
+# yarn
+yarn add @videoglow/react-video
+
+# bun
+bun add @videoglow/react-video
+```
+
+YouTube in React:
+
+```bash
+# npm
+npm install @videoglow/react-youtube
+
+# pnpm
 pnpm add @videoglow/react-youtube
 
-# a canvas you draw yourself, in React
+# yarn
+yarn add @videoglow/react-youtube
+
+# bun
+bun add @videoglow/react-youtube
+```
+
+A canvas you draw yourself, in React:
+
+```bash
+# npm
+npm install @videoglow/react @videoglow/canvas
+
+# pnpm
 pnpm add @videoglow/react @videoglow/canvas
 
-# no React
+# yarn
+yarn add @videoglow/react @videoglow/canvas
+
+# bun
+bun add @videoglow/react @videoglow/canvas
+```
+
+No React, engine and video source only:
+
+```bash
+# npm
+npm install @videoglow/core @videoglow/video
+
+# pnpm
 pnpm add @videoglow/core @videoglow/video
+
+# yarn
+yarn add @videoglow/core @videoglow/video
+
+# bun
+bun add @videoglow/core @videoglow/video
 ```
 
 React 18.2 and 19 are supported. The packages ship ESM and CommonJS builds
@@ -182,7 +235,7 @@ export default function Page() {
 ```
 
 `apps/examples` in this repository is a complete Next.js 16 App Router
-application built this way.
+application built this way. It is deployed at https://videoglow.brunosilva.io.
 
 ## Configuration
 
@@ -248,6 +301,7 @@ Documentation:
 - [Browser and YouTube API research](./docs/architecture/browser-research.md)
 - [Package naming](./docs/architecture/package-naming.md)
 - [Migration from react-ambilight 1.x](./docs/architecture/migration.md)
+- [Live examples](https://videoglow.brunosilva.io)
 - [Deployment to Vercel](./docs/deployment.md)
 - [Releasing](./docs/releasing.md)
 - [Contributing](./CONTRIBUTING.md)

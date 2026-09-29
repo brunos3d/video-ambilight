@@ -1,8 +1,8 @@
 # Deploying the examples app to Vercel
 
-The examples site is `apps/examples`, a Next.js 16 App Router application. It
-consumes the built packages, so the build must run through Nx to build the
-packages first.
+The examples site is `apps/examples`, a Next.js 16 App Router application,
+served at https://videoglow.brunosilva.io. It consumes the built packages, so
+the build must run through Nx to build the packages first.
 
 ## Project settings
 
@@ -12,6 +12,8 @@ packages first.
    default for monorepos). Vercel detects the pnpm workspace and runs the
    install at the repository root.
 4. Framework preset: Next.js (auto-detected).
+5. Domain: `videoglow.brunosilva.io` is assigned to the production
+   environment. Preview deployments keep the default `*.vercel.app` URLs.
 
 `apps/examples/vercel.json` sets the commands:
 

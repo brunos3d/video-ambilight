@@ -3,10 +3,22 @@
 React bindings for the `@videoglow/core` engine. Depends on core only; pair it
 with a source package or your own `FrameSource`.
 
+Live examples and documentation: https://videoglow.brunosilva.io
+
 ## Install
 
 ```bash
+# npm
+npm install @videoglow/react @videoglow/core
+
+# pnpm
 pnpm add @videoglow/react @videoglow/core
+
+# yarn
+yarn add @videoglow/react @videoglow/core
+
+# bun
+bun add @videoglow/react @videoglow/core
 ```
 
 React 18.2 and 19. Every export is a client component (`'use client'`).

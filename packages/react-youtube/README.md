@@ -3,10 +3,22 @@
 `YouTubeAmbilight`: a YouTube player with a synchronized, blurred second player
 behind it.
 
+Live examples and documentation: https://videoglow.brunosilva.io
+
 ## Install
 
 ```bash
+# npm
+npm install @videoglow/react-youtube
+
+# pnpm
 pnpm add @videoglow/react-youtube
+
+# yarn
+yarn add @videoglow/react-youtube
+
+# bun
+bun add @videoglow/react-youtube
 ```
 
 Pulls in `@videoglow/react`, `@videoglow/youtube` and `@videoglow/core`.

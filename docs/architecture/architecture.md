@@ -229,8 +229,8 @@ browser globals.
 `apps/examples` is a Next.js 16 App Router application. Pages are server
 components that render small client components which use the packages. The
 site doubles as documentation and as the Playwright test target. It deploys
-to Vercel with `apps/examples` as the project root directory; see
-`docs/deployment.md`.
+to Vercel at https://videoglow.brunosilva.io with `apps/examples` as the
+project root directory; see `docs/deployment.md`.
 
 ## Build
 

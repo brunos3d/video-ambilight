@@ -2,10 +2,22 @@
 
 Canvas and image frame sources for `@videoglow/core`.
 
+Live examples and documentation: https://videoglow.brunosilva.io
+
 ## Install
 
 ```bash
+# npm
+npm install @videoglow/core @videoglow/canvas
+
+# pnpm
 pnpm add @videoglow/core @videoglow/canvas
+
+# yarn
+yarn add @videoglow/core @videoglow/canvas
+
+# bun
+bun add @videoglow/core @videoglow/canvas
 ```
 
 ## Usage

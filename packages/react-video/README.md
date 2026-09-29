@@ -2,10 +2,22 @@
 
 `VideoAmbilight`: a `<video>` element with an Ambilight glow behind it.
 
+Live examples and documentation: https://videoglow.brunosilva.io
+
 ## Install
 
 ```bash
+# npm
+npm install @videoglow/react-video
+
+# pnpm
 pnpm add @videoglow/react-video
+
+# yarn
+yarn add @videoglow/react-video
+
+# bun
+bun add @videoglow/react-video
 ```
 
 Pulls in `@videoglow/react`, `@videoglow/video` and `@videoglow/core`.

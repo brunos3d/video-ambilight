@@ -9,10 +9,22 @@
 - Handles `play`, `pause`, `ended`, `waiting`, `seeked`, `loadedmetadata`,
   `resize`, `emptied` and `error`.
 
+Live examples and documentation: https://videoglow.brunosilva.io
+
 ## Install
 
 ```bash
+# npm
+npm install @videoglow/core @videoglow/video
+
+# pnpm
 pnpm add @videoglow/core @videoglow/video
+
+# yarn
+yarn add @videoglow/core @videoglow/video
+
+# bun
+bun add @videoglow/core @videoglow/video
 ```
 
 ## Usage

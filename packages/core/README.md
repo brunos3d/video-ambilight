@@ -6,10 +6,22 @@ into a small canvas and lets CSS blur it on the compositor.
 Part of [videoglow](https://github.com/brunos3d/video-ambilight). No
 dependencies. Browser only at runtime, safe to import on the server.
 
+Live examples and documentation: https://videoglow.brunosilva.io
+
 ## Install
 
 ```bash
+# npm
+npm install @videoglow/core
+
+# pnpm
 pnpm add @videoglow/core
+
+# yarn
+yarn add @videoglow/core
+
+# bun
+bun add @videoglow/core
 ```
 
 You also need a source package (`@videoglow/video`, `@videoglow/canvas`) or

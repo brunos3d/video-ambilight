@@ -13,7 +13,7 @@ pnpm test
 ## Layout
 
 ```
-apps/examples        Next.js 16 App Router site (playground, docs, e2e target)
+apps/examples        Next.js 16 App Router site (videoglow.brunosilva.io, e2e target)
 apps/examples-e2e    Playwright tests
 apps/storybook       Storybook host; stories live in apps/storybook/stories
 packages/*           publishable packages

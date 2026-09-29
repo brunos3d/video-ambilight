@@ -7,10 +7,22 @@ not feed the canvas renderer. It runs a second, muted YouTube player behind the
 visible one, applies the same glow CSS that `@videoglow/core` generates, and
 keeps the two players aligned with an explicit synchronization policy.
 
+Live examples and documentation: https://videoglow.brunosilva.io
+
 ## Install
 
 ```bash
+# npm
+npm install @videoglow/core @videoglow/youtube
+
+# pnpm
 pnpm add @videoglow/core @videoglow/youtube
+
+# yarn
+yarn add @videoglow/core @videoglow/youtube
+
+# bun
+bun add @videoglow/core @videoglow/youtube
 ```
 
 ## Usage
