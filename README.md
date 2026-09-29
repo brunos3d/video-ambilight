@@ -1,7 +1,3 @@
-<p align="center">
-  <img alt="videoglow logo" src="./docs/images/videoglow-logo.svg" width="96" height="96" />
-</p>
-
 # videoglow
 
 Ambilight style glow behind video, canvas and YouTube content, built as a
