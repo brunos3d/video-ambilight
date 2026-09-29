@@ -6,6 +6,8 @@ const CODE = `
 import { createAmbilight } from '@videoglow/core'
 import { createVideoSource } from '@videoglow/video'
 
+export const metadata = { title: 'Core without React' }
+
 const video = document.querySelector('video')
 const container = video.parentElement // positioned box around the video
 

@@ -6,6 +6,8 @@ const CODE = `
 import { VideoAmbilight } from 'react-ambilight'
 import 'react-ambilight/dist/style.css' // still resolves; now empty
 
+export const metadata = { title: 'react-ambilight 1.x API' }
+
 <VideoAmbilight videoId="ASzOzrB-a9E" />
 `
 

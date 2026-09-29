@@ -1,6 +1,8 @@
 import { DemoHeader } from '@/components/demo-header'
 import { ConfigurationDemo } from '@/components/configuration-demo'
 
+export const metadata = { title: 'Configuration' }
+
 export default function ConfigurationPage() {
   return (
     <>

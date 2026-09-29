@@ -6,6 +6,8 @@ const CODE = `
 'use client'
 import { YouTubeAmbilight } from '@videoglow/react-youtube'
 
+export const metadata = { title: 'YouTube' }
+
 export function Player() {
   return (
     <YouTubeAmbilight

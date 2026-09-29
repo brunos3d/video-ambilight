@@ -12,7 +12,8 @@ import { glowCanvas, pauseVideo, seekVideo } from './helpers'
 test('the small-buffer pipeline matches the full-resolution baseline', async ({
   page,
 }, testInfo) => {
-  await page.setViewportSize({ width: 1200, height: 1400 })
+  // Tall enough for both players and their glow spill; screenshot clips are viewport bound.
+  await page.setViewportSize({ width: 1200, height: 2600 })
   await page.goto('/baseline')
   const original = page.getByTestId('baseline-original')
   // Video attributes are forwarded to the <video>; its parent is the glow wrapper.

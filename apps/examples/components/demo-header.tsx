@@ -1,27 +1,34 @@
-import type { DemoRoute } from '@/lib/site'
-import { DEMOS } from '@/lib/site'
+import type { ReactNode } from 'react'
+import { DEMOS, type DemoHref } from '@/lib/site'
+import { InstallTabs } from '@/components/install-tabs'
 
-export function DemoHeader({
-  route,
-  children,
-}: {
-  route: DemoRoute['href']
-  children?: React.ReactNode
-}) {
+export function DemoHeader({ route, children }: { route: DemoHref; children?: ReactNode }) {
   const demo = DEMOS.find((d) => d.href === route)
   if (!demo) throw new Error(`Unknown demo route ${route}`)
+  const Icon = demo.icon
   return (
     <header className="demo-header">
+      <p className="eyebrow">
+        <Icon size={14} strokeWidth={1.75} aria-hidden="true" />
+        Demo
+      </p>
       <h1>{demo.title}</h1>
-      <p>{demo.summary}</p>
+      <p className="lede">{demo.summary}</p>
       {children}
       <div className="pill-row">
         {demo.packages.map((name) => (
-          <span key={name} className="pill">
+          <a
+            key={name}
+            className="pill"
+            href={`https://www.npmjs.com/package/${name}`}
+            target="_blank"
+            rel="noreferrer"
+          >
             {name}
-          </span>
+          </a>
         ))}
       </div>
+      <InstallTabs packages={demo.packages.map((name) => ({ name }))} />
     </header>
   )
 }

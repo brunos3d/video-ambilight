@@ -6,6 +6,8 @@ const CODE = `
 'use client'
 import { VideoAmbilight } from '@videoglow/react-video'
 
+export const metadata = { title: 'Native video' }
+
 export function Player() {
   return <VideoAmbilight src="/media/clip.webm" controls muted loop autoPlay playsInline blur={80} />
 }

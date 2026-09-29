@@ -1,6 +1,8 @@
 import { DemoHeader } from '@/components/demo-header'
 import { BaselineDemo } from '@/components/baseline-demo'
 
+export const metadata = { title: 'Baseline comparison' }
+
 export default function BaselinePage() {
   return (
     <>
