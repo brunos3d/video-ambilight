@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@videoglow/core": ["packages/core/src/index.ts"],
+      "@videoglow/video": ["packages/video/src/index.ts"],
+      "@videoglow/canvas": ["packages/canvas/src/index.ts"],
+      "@videoglow/youtube": ["packages/youtube/src/index.ts"],
+      "@videoglow/react": ["packages/react/src/index.ts"],
+      "@videoglow/react-video": ["packages/react-video/src/index.ts"],
+      "@videoglow/react-youtube": ["packages/react-youtube/src/index.ts"],
+      "react-ambilight": ["packages/react-ambilight/src/index.ts"]
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "name": "videoglow-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Ambilight style glow for video, canvas and YouTube: framework-agnostic core with React integrations.",
+  "license": "MIT",
+  "author": "Bruno Silva <foss@brunosilva.io>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunos3d/video-ambilight.git"
+  },
+  "packageManager": "pnpm@10.27.0",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "build": "nx run-many -t build",
+    "typecheck": "nx run-many -t typecheck",
+    "lint": "nx run-many -t lint",
+    "test": "nx run-many -t test",
+    "e2e": "nx run examples-e2e:e2e",
+    "storybook": "nx run storybook:storybook",
+    "build-storybook": "nx run storybook:build-storybook",
+    "dev": "nx run examples:dev",
+    "graph": "nx graph",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "fixtures:media": "node tools/scripts/generate-media-fixtures.mjs"
+  },
+  "devDependencies": {
+    "@nx/eslint-plugin": "23.2.1",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/react": "16.3.3",
+    "@types/node": "^24.19.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@typescript-eslint/parser": "8.71.0",
+    "@vitejs/plugin-react": "6.1.1",
+    "@vitest/coverage-v8": "5.0.2",
+    "eslint": "9.39.5",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "jsdom": "30.1.1",
+    "nx": "23.2.1",
+    "prettier": "3.9.9",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "tsup": "8.5.1",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.71.0",
+    "vite": "8.3.1",
+    "vitest": "5.0.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "nx",
+      "esbuild",
+      "sharp",
+      "@parcel/watcher",
+      "unrs-resolver"
+    ]
+  }
+}
