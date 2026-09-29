@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "paths": {},
+    "types": ["node"]
+  },
+  "include": ["stories/**/*.ts", "stories/**/*.tsx", ".storybook/**/*.ts"]
+}

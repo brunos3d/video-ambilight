@@ -1,83 +1,64 @@
 {
   "name": "react-ambilight",
-  "author": "Bruno Silva <foss@brunosilva.io>",
-  "description": "🌈 A lightweight React component for creating an Ambilight effect with YouTube videos.",
+  "version": "2.0.0",
+  "description": "Compatibility package for react-ambilight 1.x. Re-exports the YouTube Ambilight component from @videoglow/react-youtube.",
   "license": "MIT",
+  "author": "Bruno Silva <foss@brunosilva.io>",
+  "homepage": "https://github.com/brunos3d/video-ambilight#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunos3d/video-ambilight.git",
+    "directory": "packages/react-ambilight"
+  },
   "keywords": [
     "ambilight",
     "react",
-    "canvas",
-    "html",
-    "css",
+    "youtube",
     "video",
     "effect",
-    "youtube",
-    "nextjs",
-    "next",
-    "neon",
-    "immersive"
+    "nextjs"
   ],
-  "version": "1.1.0",
   "type": "module",
-  "scripts": {
-    "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx",
-    "lint:fix": "eslint . --ext ts,tsx --fix",
-    "format": "prettier --check .",
-    "format:fix": "prettier --write .",
-    "stylelint": "stylelint **/*.css",
-    "stylelint:fix": "stylelint **/*.css --fix",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "prepublishOnly": "npm run build"
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./dist/style.css": "./dist/style.css",
+    "./style.css": "./dist/style.css",
+    "./package.json": "./package.json"
   },
-  "module": "./dist/main.js",
-  "exports": "./dist/main.js",
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
-  "types": "./dist/main.d.ts",
-  "peerDependencies": {
-    "react": "^16.14.0 || ^17.0.2 || ^18.0.0",
-    "react-dom": "^16.14.0 || ^17.0.2 || ^18.0.0"
-  },
-  "devDependencies": {
-    "@chromatic-com/storybook": "1.3.2",
-    "@storybook/addon-essentials": "8.0.8",
-    "@storybook/addon-interactions": "8.0.8",
-    "@storybook/addon-links": "8.0.8",
-    "@storybook/addon-onboarding": "8.0.8",
-    "@storybook/blocks": "8.0.8",
-    "@storybook/react": "8.0.8",
-    "@storybook/react-vite": "8.0.8",
-    "@storybook/test": "8.0.8",
-    "@types/node": "20.12.7",
-    "@types/react": "18.2.78",
-    "@types/react-dom": "18.2.25",
-    "@types/youtube-player": "^5.5.11",
-    "@typescript-eslint/eslint-plugin": "7.0.2",
-    "@typescript-eslint/parser": "7.0.2",
-    "@vitejs/plugin-react": "4.2.1",
-    "autoprefixer": "10.4.19",
-    "clsx": "^2.1.0",
-    "eslint": "8.57.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-react-hooks": "4.6.0",
-    "eslint-plugin-react-refresh": "0.4.5",
-    "eslint-plugin-storybook": "0.8.0",
-    "glob": "10.3.12",
-    "jsdom": "24.0.0",
-    "magic-string": "^0.30.14",
-    "prettier": "3.2.5",
-    "rollup-preserve-directives": "^1.1.3",
-    "storybook": "8.0.8",
-    "stylelint": "16.3.1",
-    "stylelint-config-standard": "36.0.0",
-    "typescript": "5.4.5",
-    "vite": "5.2.8",
-    "vite-plugin-dts": "3.8.2"
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint -c ../../eslint.config.mjs ."
   },
   "dependencies": {
-    "youtube-player": "5.5.2"
+    "@videoglow/react-youtube": "workspace:^",
+    "@videoglow/youtube": "workspace:^"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0 || ^19.0.0",
+    "react-dom": "^18.2.0 || ^19.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "nx": {
+    "tags": [
+      "layer:compat"
+    ]
   }
 }

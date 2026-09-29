@@ -1,0 +1,9 @@
+node_modules
+dist
+.next
+storybook-static
+coverage
+pnpm-lock.yaml
+.nx
+test-results
+playwright-report

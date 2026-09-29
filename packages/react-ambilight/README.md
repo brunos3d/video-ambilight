@@ -1,120 +1,47 @@
-# 🌈 Video Ambilight
+# react-ambilight
 
-A lightweight React component to create a stunning **Ambilight effect** for YouTube videos. This package is inspired by the visual effects seen in modern video presentations, adding an immersive ambient glow that synchronizes with your content.
+Compatibility package for `react-ambilight` 1.x. Version 2 keeps the 1.x
+component API and implements it on top of
+[`@videoglow/react-youtube`](https://www.npmjs.com/package/@videoglow/react-youtube).
 
-## ✨ Features
+New projects should install `@videoglow/react-youtube` directly.
 
-- Works seamlessly with YouTube videos using the [YouTube IFrame API](https://developers.google.com/youtube/iframe_api_reference).
-- Supports synchronized playback between the video and the Ambilight effect.
-- Customizable and easy to integrate into any React project.
-
-## 📦 Installation
-
-Install the package via npm:
+## Install
 
 ```bash
-npm install react-ambilight
+pnpm add react-ambilight
 ```
 
-or using Yarn:
+React 18.2 and 19 (React 16 and 17 are no longer supported).
 
-```bash
-yarn add react-ambilight
-```
-
-## 🔧 Usage
-
-Here's a quick example of how to use the component:
+## Usage (unchanged)
 
 ```tsx
-import React from 'react'
 import { VideoAmbilight } from 'react-ambilight'
-import 'react-ambilight/dist/style.css'
+import 'react-ambilight/dist/style.css' // optional; the file is now empty
 
 export default function App() {
-  return (
-    <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-      <VideoAmbilight videoId='dQw4w9WgXcQ' />
-    </div>
-  )
+  return <VideoAmbilight videoId="dQw4w9WgXcQ" />
 }
 ```
 
-Customize the component by passing a `className` or `classNames` object with custom class names:
+`className` and the `classNames` object (`videoWrapper`, `ambilightWrapper`,
+`aspectRatio`, `ambilight`, `ambilightVideo`) are honored as before.
 
-```tsx
-// tailwind example
-import React from 'react'
-import { VideoAmbilight } from 'react-ambilight'
-import 'react-ambilight/dist/style.css'
+## What changed in 2.0
 
-export default function App() {
-  return (
-    <div className='max-w-4xl mx-auto'>
-      <VideoAmbilight
-        videoId='dQw4w9WgXcQ'
-        classNames={{
-          videoWrapper: 'relative',
-          ambilightWrapper: 'absolute inset-0',
-          aspectRatio: 'aspect-w-16 aspect-h-9',
-          ambilight: 'bg-black opacity-50',
-          ambilightVideo: 'hidden',
-        }}
-      />
-    </div>
-  )
-}
-```
+- Synchronization no longer seeks on every animation frame. Drift is checked
+  once per second and corrected only above 0.25 s. Tune it through
+  `@videoglow/react-youtube` if needed.
+- Players and listeners are destroyed on unmount. Strict Mode leaves one pair
+  of players.
+- `youtube-player` is no longer a dependency.
+- `PlayerStates`, `YouTubePlayer`, `CustomEvent`, `EventType` and
+  `RecursiveVoid` are exported as deprecated aliases of the typed
+  `@videoglow/youtube` API.
 
-### Props
+See the [migration guide](https://github.com/brunos3d/video-ambilight/blob/main/docs/architecture/migration.md).
 
-| Prop         | Type     | Description                             | Required |
-| ------------ | -------- | --------------------------------------- | -------- |
-| `videoId`    | `string` | The YouTube video ID to display.        | Yes      |
-| `className`  | `string` | Optional class name for styling.        | No       |
-| `classNames` | `object` | Optional object for custom class names. | No       |
+## License
 
-#### classNames Object
-
-The `classNames` object can have the following properties:
-
-| Property           | Type     | Description                                    |
-| ------------------ | -------- | ---------------------------------------------- |
-| `videoWrapper`     | `string` | Class name for the video wrapper.              |
-| `ambilightWrapper` | `string` | Class name for the ambilight wrapper.          |
-| `aspectRatio`      | `string` | Class name for the aspect ratio container.     |
-| `ambilight`        | `string` | Class name for the ambilight effect container. |
-| `ambilightVideo`   | `string` | Class name for the ambilight video container.  |
-
-## 🚀 Demo
-
-Check out a live demo of the Ambilight effect: [Live Demo](https://brunos3d.github.io/video-ambilight/)
-
-## 🛠 How It Works
-
-The component leverages the YouTube IFrame API to create two synchronized players:
-
-1. **Primary Player:** Displays the video.
-2. **Ambilight Player:** Runs a low-quality version of the same video in the background to generate the glowing effect.
-
-## 🧩 Contributing
-
-Contributions are welcome! If you encounter any issues or have suggestions, feel free to open an issue or submit a pull request.
-
-1. Fork the repository.
-2. Create a feature branch: `git checkout -b feature-name`.
-3. Commit your changes: `git commit -m 'Add feature-name'`.
-4. Push to the branch: `git push origin feature-name`.
-5. Open a pull request.
-
-## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## 🙌 Acknowledgements
-
-Inspired by the Ambilight effect seen during the Next.js Conf presentations.
-
----
-
-💻 **Made with ❤️ by [Bruno Silva](https://github.com/brunos3d)**
+MIT

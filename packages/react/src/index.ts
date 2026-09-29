@@ -1,0 +1,11 @@
+// The build prepends the React client directive (see tools/tsup/base.ts).
+export { Ambilight } from './ambilight'
+export type { AmbilightHandle, AmbilightProps } from './ambilight'
+export { useAmbilight } from './use-ambilight'
+export type { UseAmbilightOptions } from './use-ambilight'
+export { useFrameSource } from './use-frame-source'
+export { useAmbilightState } from './use-ambilight-state'
+export { resolveElement } from './element-input'
+export type { ElementInput } from './element-input'
+export { useOwnedResource } from './use-owned-resource'
+export { useLatest } from './use-latest'

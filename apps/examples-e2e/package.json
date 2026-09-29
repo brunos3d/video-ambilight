@@ -1,0 +1,37 @@
+{
+  "name": "examples-e2e",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Playwright browser tests against the built examples app: real video decoding, canvas sampling, YouTube mounting and visual baselines.",
+  "scripts": {
+    "e2e": "playwright test",
+    "e2e:ui": "playwright test --ui",
+    "e2e:update": "playwright test --update-snapshots",
+    "typecheck": "tsc -p tsconfig.json",
+    "lint": "eslint -c ../../eslint.config.mjs ."
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/node": "^24.19.0",
+    "typescript": "5.9.3"
+  },
+  "nx": {
+    "tags": [
+      "layer:app"
+    ],
+    "implicitDependencies": [
+      "examples"
+    ],
+    "targets": {
+      "e2e": {
+        "dependsOn": [
+          "examples:build"
+        ],
+        "outputs": [
+          "{projectRoot}/test-results",
+          "{projectRoot}/playwright-report"
+        ]
+      }
+    }
+  }
+}

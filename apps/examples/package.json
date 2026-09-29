@@ -1,0 +1,54 @@
+{
+  "name": "examples",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Next.js App Router playground and documentation site for the @videoglow packages.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "next typegen && tsc -p tsconfig.json",
+    "lint": "eslint -c ../../eslint.config.mjs ."
+  },
+  "dependencies": {
+    "@videoglow/canvas": "workspace:^",
+    "@videoglow/core": "workspace:^",
+    "@videoglow/react": "workspace:^",
+    "@videoglow/react-video": "workspace:^",
+    "@videoglow/react-youtube": "workspace:^",
+    "@videoglow/video": "workspace:^",
+    "@videoglow/youtube": "workspace:^",
+    "next": "16.3.7",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-ambilight": "workspace:^"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "5.9.3"
+  },
+  "nx": {
+    "tags": [
+      "layer:app"
+    ],
+    "targets": {
+      "build": {
+        "outputs": [
+          "{projectRoot}/.next"
+        ]
+      },
+      "dev": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "start": {
+        "dependsOn": [
+          "build"
+        ]
+      }
+    }
+  }
+}

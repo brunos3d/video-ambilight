@@ -1,0 +1,4 @@
+/*
+ * react-ambilight 2.x applies its styles inline. This file exists so that
+ * `import 'react-ambilight/dist/style.css'` from 1.x keeps resolving.
+ */
